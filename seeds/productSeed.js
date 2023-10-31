@@ -130,25 +130,24 @@ const productData = [
 		category_id: 3,
 	},
     {
-		name: "",
-		price:,
+		name: "Logitech® M325 Wireless Mouse, Blue",
+		price: 19.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/604723/604723_o02_021323/604723",
+		short_desc: "A better mix of precision and comfort with designed-for-Web scrolling.",
 		long_desc:
-			"",
+			"Designed for how you use the Web, our newest micro-precise scrolling makes reading your Facebook®, shopping Amazon®, or scrolling through Google® searches easier.* Plus, tilting the wheel left or right moves you backward or forward on the Web. Its feel-good, contoured shape and textured rubber grips help keep your hand happy even after long hours.",
 		category_id: 4,
 	},
     {
-		name: "",
-		price:,
+		name: "Logitech ERGO M575 Wireless Trackball Mouse, Black",
+		price: 49.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/5765812/5765812_o01_120821/5765812",
+
+		short_desc: "A wireless trackball with incredibly easy thumb control.",
 		long_desc:
-			"",
+			"The Logitech Ergo series that promotes increased comfort, lower muscle strain, and improved, more natural posture. Forget about sliding around a mouse or moving your arm to move the cursor.",
 		category_id: 4,
 	},
     {
