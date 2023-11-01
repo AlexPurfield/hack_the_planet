@@ -1,26 +1,16 @@
+import React from 'react'; 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_USER } from '../utils/mutations';
-import {  } from 'react-bootstrap';
+// import { useMutation } from '@apollo/client';
+// import Auth from '../utils/auth';
+// import { ADD_USER } from '../utils/mutations';
 
 function CreateAccount(props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [addUser] = useMutation(ADD_USER);
-  
+
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-      const mutationResponse = await addUser({
-        variables: {
-          email: formState.email,
-          password: formState.password,
-          firstName: formState.firstName,
-          lastName: formState.lastName,
-        },
-      });
-      const token = mutationResponse.data.addUser.token;
-      Auth.login(token);
+//    
     };
   
     const handleChange = (event) => {
@@ -32,11 +22,13 @@ function CreateAccount(props) {
     };
   
     return (
+      
       <div className="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabIndex="-1" role="dialog" id="modalSignin">
         <div className="modal-dialog" role="document">
           <div className="modal-content rounded-4 shadow">
             <div className="modal-header p-5 pb-4 border-bottom-0">
               <h1 className="fw-bold mb-0 fs-2">Sign up for free</h1>
+              <Link to="/login">← Go to Login</Link>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
   
@@ -53,19 +45,6 @@ function CreateAccount(props) {
                 <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
                 <small className="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
                 <hr className="my-4" />
-                <h2 className="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                <button className="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-                  <svg className="bi me-1" width="16" height="16"><use xlinkHref="#twitter"/></svg>
-                  Sign up with Twitter
-                </button>
-                <button className="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-                  <svg className="bi me-1" width="16" height="16"><use xlinkHref="#facebook"/></svg>
-                  Sign up with Facebook
-                </button>
-                <button className="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-                  <svg className="bi me-1" width="16" height="16"><use xlinkHref="#github"/></svg>
-                  Sign up with GitHub
-                </button>
               </form>
             </div>
           </div>
