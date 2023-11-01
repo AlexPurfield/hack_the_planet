@@ -151,69 +151,66 @@ const productData = [
 		category_id: 4,
 	},
     {
-		name: "",
-		price:,
+		name: "Logitech Lift Vertical Ergonomic Mouse",
+		price: 69.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen/products/7263334/7263334_o01_080522/7263334",
+
+		short_desc: "A comfy and intuitive wireless mouse with quiet clicks",
 		long_desc:
-			"",
+			" Scrolling feels second nature with SmartWheel, which easily shifts from precision to speed-scroll. Customize Lift ergo mouse using intuitive Logi Options+ Software. Easily assign each of the 4 easy-to-reach customizable buttons to a handy shortcut program them to change as you hop between apps. Connect with up to 3 devices, and Easy-Switch between them at the click of a button.",
 		category_id: 4,
 	},
     {
-		name: "",
-		price:,
+		name: "Logitech® Design Collection Limited Edition Wireless Mouse, Forest Floral",
+		price: 19.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/9906635/9906635_o01_051722/9906635",
+
+		short_desc: "Smooth, line by line scrolling and precise cursor control for easy navigation.",
 		long_desc:
-			"",
+			"Scroll effortlessly using the Logitech Design Collection Limited Edition Wireless Mouse. Its 10m wireless operating range offers ease of use anywhere at your desk.",
 		category_id: 4,
 	},
     {
-		name: "",
-		price:,
+		name: "Whalen® Jasper 60 inch W L-Shape Corner Desk",
+		price: 249.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/163691/163691_o01_071723/163691",
+		short_desc: "Laminated engineered wood frame offers strength and stability.",
 		long_desc:
-			"",
+			"Upgrade your office with this Whalen Jasper L-shaped corner desk. The integrated open bookshelf offers ample room for stationery and accessories, while the dark espresso finish blends in with various decor themes. A wide L-shaped surface accommodates a PC and other work devices comfortably.",
 		category_id: 5,
 	},
     {
-		name: "",
-		price:,
+		name: "Sauder® Nova Loft 59 inch W L-Shape Corner Desk, Grand Walnut",
+		price: 239.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3513269/3513269_o01_sauder_nova_loft_l_shaped_desk/3513269",
+
+		short_desc: "Enhance the look of your office with this 59-inch Sauder Nova Loft L-shaped desk. ",
 		long_desc:
-			"",
+			". The wooden legs offer strength and stability, while the 3 drawers let you keep your laptop, files and frequently used items tucked away. Sturdy engineered wood offers durability. This Sauder Nova Loft L-shaped desk features cable management grommets to help keep your workspace tidy, and the grand walnut finish delivers a mid-century modern touch.",
 		category_id: 5,
 	},
     {
-		name: "",
-		price:,
+		name: "Realspace® Broadstreet 65 inch W U-Shaped Executive Corner Desk",
+		price: 399.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/475994/475994_o01_realspace_broadstreet_u_shaped_executive_desk_061521/475994",
+		short_desc: "Desktop boasts a laminate finish for durability.",
 		long_desc:
-			"",
+			"Give your corner office a style boost with this Realspace Broadstreet U-shaped desk. The 3 drawers provide storage for files and supplies, while the pullout keyboard tray allows for comfortable typing. A bridge connects the 2 spacious work surfaces, delivering abundant space for your computer, calendar and peripherals.",
 		category_id: 5,
 	},
     {
-		name: "",
-		price:,
+		name: "Realspace® Magellan Performance 71 inch W L-Shape Corner Desk",
+		price: 579.99,
 		image:
-			"",
-		rating: ,
-		short_desc: "",
+			"https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/956697/956697_o01_realspace_magellan_performance_71w_l_shaped_desk_010721/956697",
+		short_desc: "Laminated wood desktop offers a hint of contemporary style.",
 		long_desc:
-			"",
+			"Organize your workspace with this 71-inch Realspace Magellan Performance L-shaped desk. The 4 integrated drawers provide plenty of room for your file folders, office supplies and peripherals, while the cord management system keeps your space neat and tidy. ",
 		category_id: 5,
 	},
 ];
