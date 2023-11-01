@@ -1,4 +1,4 @@
-const mongoose = require ('mopngoose');
+const mongoose = require ('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
