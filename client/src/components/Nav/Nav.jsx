@@ -26,7 +26,7 @@ function CustomNav() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#home">LOGIN</Nav.Link>
-            <Nav.Link href="#link">USER</Nav.Link>
+            <Nav.Link href="#link">CREATE ACCOUNT</Nav.Link>
             <Nav.Link href="#link">CART</Nav.Link>
           </Nav>
         </Navbar.Collapse>
