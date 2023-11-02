@@ -50,7 +50,7 @@ type Mutation {
     String, email: String, password: String): User updateProduct(_id: ID!, quantity: Int!):
     Product
     login(email: String!, password: String!): Auth
-}
-`;
+}`
+
 
 module.exports = typeDefs;
