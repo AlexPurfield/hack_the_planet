@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 // import Auth from '../utils/auth';
 // import { ADD_USER } from '../utils/mutations';
 
+const styles = {
+  
+}
+
 function CreateAccount(props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
 
@@ -27,8 +31,8 @@ function CreateAccount(props) {
         <div className="modal-dialog" role="document">
           <div className="modal-content rounded-4 shadow">
             <div className="modal-header p-5 pb-4 border-bottom-0">
+            <Link to="/login">← Go to Login </Link>
               <h1 className="fw-bold mb-0 fs-2">Sign up for free</h1>
-              <Link to="/login">← Go to Login</Link>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
   
@@ -50,6 +54,7 @@ function CreateAccount(props) {
           </div>
         </div>
       </div>
+      
     );
 }
 export default CreateAccount;
