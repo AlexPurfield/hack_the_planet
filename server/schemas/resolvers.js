@@ -19,9 +19,18 @@ const resolvers = {
           $regex: name,
         };
       }
-
       return await Product.find(params).populate("category");
     },
+
+    user: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findById(context.user._id);
+      }
+
+      // Handle the case when the user is not authenticated, e.g., return null or throw an error.
+      throw new Error("Authentication required to access user data");
+    }, 
+    
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
