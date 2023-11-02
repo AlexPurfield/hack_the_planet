@@ -1,15 +1,16 @@
 import { Row, Container, Col } from "react-bootstrap";
 
-const Footer = () => {
+const ProductCard = (props) => {
+  const { _id, name, description, price } = props.product;
   return (
     <Container>
       <Row>
         <Col className="mx-auto">
-          <p>© 2023, Hack The Planet</p>
+          <p>hello</p>
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default Footer;
+export default ProductCard;
