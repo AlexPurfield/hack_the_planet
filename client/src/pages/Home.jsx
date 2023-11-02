@@ -1,16 +1,61 @@
-
 // import CreateAccount from "./CreateAccount";
 // import Login from "./Login";
 import HomeCarousel from "../components/HomeCarousel/HomeCarousel";
+import ProductCard from "../components/ProductCard/ProductCard";
+import StoryCard from "../components/HomeStory/StoryCard";
+import { Row, Col, Container } from "react-bootstrap";
+
+const products = [
+  {
+    _id: 1,
+    name: "LAPTOP",
+    description: "top seller",
+    price: 999.99,
+    imgUrl: "/assets/images/Laptop.jpg",
+  },
+  {
+    _id: 2,
+    name: "KEYBOARD",
+    description: "top seller",
+    price: 999.99,
+    imgUrl: "/assets/images/Laptop.jpg",
+  },
+  {
+    _id: 3,
+    name: "MOUSE",
+    description: "top seller",
+    price: 999.99,
+    imgUrl: "/assets/images/Laptop.jpg",
+  },
+  {
+    _id: 4,
+    name: "DESK",
+    description: "top seller",
+    price: 999.99,
+    imgUrl: "/assets/images/Laptop.jpg",
+  },
+];
 
 const Home = () => {
   return (
-    <div>
-      <HomeCarousel />
+    <Container>
+      <Row>
+        <HomeCarousel />
+      </Row>
+      <Row>
+        <StoryCard />
+      </Row>
+      <Row>
+        {products.map((product, i)=>(
+        <Col xs={3} key={i}>
+          <ProductCard product={product} />
+        </Col>
+
+        ))}
+      </Row>
       {/* <CreateAccount /> */}
       {/* <Login /> */}
-
-    </div>
+    </Container>
   );
 };
 
