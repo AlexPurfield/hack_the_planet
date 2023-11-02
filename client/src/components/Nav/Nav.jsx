@@ -7,7 +7,12 @@ import LogOutButton from "../buttons/logoutbutton";
 
 function CustomNav() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary justify-content-center">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary justify-content-center"
+      bg="dark"
+      data-bs-theme="dark"
+    >
       <Container>
         <Navbar.Brand className="mx-auto" href="/">
           HACK THE PLANET
