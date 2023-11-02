@@ -2,10 +2,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Container } from "react-bootstrap";
+import LoginButton from "../buttons/loginbutton";
+import LogOutButton from "../buttons/logoutbutton";
 
 function CustomNav() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary justify-content-center">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary justify-content-center"
+      bg="dark"
+      data-bs-theme="dark"
+    >
       <Container>
         <Navbar.Brand className="mx-auto" href="/">
           HACK THE PLANET
@@ -24,7 +31,9 @@ function CustomNav() {
                 ALL HARDWARE
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/login">LOGIN</Nav.Link>
+            <Nav.Link>
+              <LoginButton /> <LogOutButton />
+            </Nav.Link>
             <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
             {/* cart will be its own component */}
             <Nav.Link href="#link">CART</Nav.Link>
