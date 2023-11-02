@@ -46,11 +46,10 @@ const Home = () => {
         <StoryCard />
       </Row>
       <Row>
-        {products.map((product, i)=>(
-        <Col xs={3} key={i}>
-          <ProductCard product={product} />
-        </Col>
-
+        {products.map((product, i) => (
+          <Col xs={12} md={3} key={i}>
+            <ProductCard product={product} />
+          </Col>
         ))}
       </Row>
       {/* <CreateAccount /> */}
