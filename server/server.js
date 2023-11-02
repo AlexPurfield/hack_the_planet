@@ -4,8 +4,10 @@ const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
 
 // Import the two parts of a GraphQL schema
-const { typeDefs, resolvers } = require("./schemas");
+const typeDefs = require("./graphql/typeDefs");
+const resolvers = require("./graphql/resolvers");
 const db = require("./config/connection");
+const { authMiddleware } = require("./middleware/auth");
 
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
@@ -22,7 +24,12 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
-  app.use("/graphql", expressMiddleware(server));
+  app.use(
+    "/graphql",
+    expressMiddleware(server, {
+      context: authMiddleware,
+    })
+  );
 
   db.once("open", () => {
     app.listen(PORT, () => {
