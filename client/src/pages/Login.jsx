@@ -7,7 +7,7 @@
 // function Login(props) {
 //     const [formState, setFormState] = useState({ email: '', password: '' });
 //     const [login, { error }] = useMutation(LOGIN);
-  
+
 //     const handleFormSubmit = async (event) => {
 //       event.preventDefault();
 //     //   try {
@@ -20,7 +20,7 @@
 //     //     console.log(e);
 //     //   }
 //     };
-  
+
 //     const handleChange = (event) => {
 //       const { name, value } = event.target;
 //       setFormState({
@@ -32,7 +32,7 @@
 //     return (
 //         <div className="container my-1">
 //           <Link to="/signup">← Go to Signup</Link>
-    
+
 //           <h2>Login</h2>
 //           <form onSubmit={handleFormSubmit}>
 //             <div className="flex-row space-between my-2">
@@ -67,16 +67,17 @@
 //         </div>
 //       );
 //     }
-    
+
 // export default Login;
-    
 
+import React from "react";
 
-import React from 'react'
-
-export default function Login() {
+const Login = () => {
   return (
-    <div>Login</div>
-    
-  )
-}
+    <div>
+      <h1>Login Page</h1>
+    </div>
+  );
+};
+
+export default Login;
