@@ -1,8 +1,14 @@
+import { Row, Container, Col } from "react-bootstrap";
+
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <Container>
+      <Row>
+        <Col className="mx-auto" >
+          <p>© 2023, Hack The Planet</p>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
