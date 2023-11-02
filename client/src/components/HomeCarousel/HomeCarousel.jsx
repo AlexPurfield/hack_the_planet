@@ -22,7 +22,7 @@ const HomeCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
               <Image
-                src="/assets/images/TheMatrix.jpg"
+                src="/assets/images/NeosDesk.jpg"
                 className="HomeCarouselImage"
               />
               <Carousel.Caption>
@@ -32,7 +32,7 @@ const HomeCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
               <Image
-                src="/assets/images/WarGames.jpg"
+                src="/assets/images/CodeBreaker.jpg"
                 className="HomeCarouselImage"
               />
               <Carousel.Caption>

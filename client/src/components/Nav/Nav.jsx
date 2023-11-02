@@ -1,7 +1,7 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Row, Container, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 function CustomNav() {
   return (
@@ -10,7 +10,6 @@ function CustomNav() {
         <Navbar.Brand className="mx-auto" href="/">
           HACK THE PLANET
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
