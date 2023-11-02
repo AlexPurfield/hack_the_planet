@@ -36,7 +36,7 @@ function CustomNav() {
             </Nav.Link>
             <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
             {/* cart will be its own component */}
-            <Nav.Link href="#link">CART</Nav.Link>
+            <Nav.Link href="">CHECKOUT</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
