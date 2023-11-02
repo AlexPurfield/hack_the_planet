@@ -34,7 +34,7 @@ type Auth {
 }
 type Query {
   categories: [Category]
-  products(category: ID, name: String);
+  products(category: ID, name: String):
   [Product]
   product(_id: ID!): Product
   user: User
@@ -53,6 +53,5 @@ type Mutation {
     login(email: String!, password: String!): Auth
 }
 `;
-
 
 module.exports = typeDefs;

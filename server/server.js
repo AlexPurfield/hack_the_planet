@@ -2,14 +2,10 @@ const express = require("express");
 // Import the ApolloServer class
 const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
-require("dotenv").config();
 
 // Import the two parts of a GraphQL schema
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
-const passport = require("./utils/passport");
-
-app.use(passport.initialize());
 
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
