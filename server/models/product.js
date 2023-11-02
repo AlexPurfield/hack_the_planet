@@ -22,7 +22,7 @@ const productSchema = new Schema({
   long_desc: {
     type: String
   },
-  category_id: {
+  category: {
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true

@@ -2,10 +2,9 @@ const typeDefs = `
 type Product {
   _id: ID
   name: String
-  description: String
-  image: String
-  quantity: Int
   price: Float
+  image: String
+  short_desc: String
   category: Category
 }
 
@@ -34,7 +33,7 @@ type Auth {
 }
 type Query {
   categories: [Category]
-  products(category: ID, name: String);
+  products(category: ID, name: String):
   [Product]
   product(_id: ID!): Product
   user: User
