@@ -12,9 +12,7 @@ const ProductCard = (props) => {
         <Card.Text style={{ textAlign: "center" }}>
           {description} <p>{price}</p>
         </Card.Text>
-        <Button variant="dark" className="mx-auto">
-          WE'RE IN
-        </Button>
+        <Button variant="dark">WE'RE IN</Button>
       </Card.Body>
     </Card>
   );
