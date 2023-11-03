@@ -8,7 +8,6 @@ const ProductsPage = () => {
     price: 0,
     image:
         "",
-
     short_desc: "",
 
 },]);
@@ -18,16 +17,19 @@ let query = {
 
   const fetchAllProductData = async () => { 
     const response = await fetch('http://localhost:3001/graphql', {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "no-cors", // no-cors, *cors, same-origin
-    credentials: "same-origin", // include, *same-origin, omit
+    method: "POST",
+    mode: "no-cors", 
+    credentials: "same-origin", 
     headers: {
       "Content-Type": "application/json"
-      // 'Content-Type': 'application/x-www-form-urlencoded',
+     
     },
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    referrerPolicy: "no-referrer",
     body: JSON.stringify(query)
-  });
+  })
+// //   .then( (response)=> {
+// //     return response.json
+//   }) ;
   console.log(response);
 
   } 
