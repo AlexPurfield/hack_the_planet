@@ -1,3 +1,5 @@
+import { Auth0Provider } from "@auth0/auth0-react";
+
 import { Routes, Route } from "react-router-dom";
 import ProductsPage from './pages/ProductsPage';
 
