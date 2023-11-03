@@ -1,3 +1,8 @@
+import { Auth0Provider } from "@auth0/auth0-react";
+
+// import { Routes, Route } from "react-router-dom";
+// import ProductsPage from './pages/ProductsPage';
+
 import { Outlet } from "react-router-dom";
 import {
   ApolloClient,
@@ -35,14 +40,25 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      {/* <StoreProvider> */}
-      <CustomNav />
-      <Outlet />
-      <Footer />
-      {/* </StoreProvider> */}
-    </ApolloProvider>
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      redirectUri={window.location.origin}
+    >
+      <ApolloProvider client={client}>
+        {/* <StoreProvider> */}
+        <CustomNav />
+        {/* <Routes>
+        {/* <Route path="/products" element={<ProductsPage />} /> */}
+        {/* Add other routes here */}
+        {/* </Routes> */}
+        <Outlet />
+        <Footer />
+        {/* </StoreProvider> */}
+      </ApolloProvider>
+    </Auth0Provider>
   );
 }
+
 
 export default App;
