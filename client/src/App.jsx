@@ -1,7 +1,7 @@
 import { Auth0Provider } from "@auth0/auth0-react";
 
-import { Routes, Route } from "react-router-dom";
-import ProductsPage from './pages/ProductsPage';
+// import { Routes, Route } from "react-router-dom";
+// import ProductsPage from './pages/ProductsPage';
 
 import { Outlet } from "react-router-dom";
 import {
@@ -48,10 +48,10 @@ function App() {
       <ApolloProvider client={client}>
         {/* <StoreProvider> */}
         <CustomNav />
-        <Routes>
-        <Route path="/products" element={<ProductsPage />} />
+        {/* <Routes>
+        {/* <Route path="/products" element={<ProductsPage />} /> */}
         {/* Add other routes here */}
-        </Routes>
+        {/* </Routes> */}
         <Outlet />
         <Footer />
         {/* </StoreProvider> */}
