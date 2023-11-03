@@ -62,15 +62,15 @@ db.once("open", async () => {
       category: categories[3]._id,
     },
     {
-      name: "Dell™ Inspiron 24 5420 All-In-One Desktop PC",
-      price: 649.99,
+      name: "Lenovo® IdeaPad Flex 5i 2-in-1 Touch Laptop",
+      price: 629.99,
       image:
-        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/8855982/8855982_o01/8855982",
+        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/7317994/7317994_o01_090323/7317994",
 
       short_desc:
-        "You can stay productive or just surf the Web with help from this Dell all-in-one PC.",
+        "Make the most of your time with this Lenovo IdeadPad laptop. The Windows 11 laptop offers plenty of helpful features, including a built-in webcam and built-in WiFi 6. The Lenovo convertible laptop easily rotates to become a tablet, adding versatility to its arsenal.",
       long_desc:
-        "The Dell Inspiron desktop features a massive 1TB hard drive and a generous 256GB solid state drive for simple storage and an Intel Core i5 processor to allow reliable performance. The Windows 11 desktop comes with helpful apps and fun programs right out of the box.",
+        "Lenovo® IdeaPad features a massive 1TB hard drive and a generous 256GB solid state drive for simple storage and an Intel Core i5 processor to allow reliable performance. The Windows 11 desktop comes with helpful apps and fun programs right out of the box.",
       category: categories[4]._id,
     },
     {

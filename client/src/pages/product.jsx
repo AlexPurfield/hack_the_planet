@@ -24,7 +24,7 @@ const Product = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <h1 className="display-3 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.name}</h1>
+            <h1 className="display-4 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.name}</h1>
             <ProductCard product={product} />
             <p className="display-6 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.short_desc}</p>
             <p className="display-6 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.long_desc}</p>
