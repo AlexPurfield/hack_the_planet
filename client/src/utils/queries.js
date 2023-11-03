@@ -8,6 +8,7 @@ export const QUERY_SINGLE_PRODUCT = gql`
       price
       image
       short_desc
+      long_desc
       category {
         name
       }

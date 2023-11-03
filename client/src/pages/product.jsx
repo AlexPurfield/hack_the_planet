@@ -25,6 +25,9 @@ const Product = () => {
           <Col xs={12}>
             <h1>{product.name}</h1>
             <p>{product.short_desc}</p>
+            <p>{product.price}</p>
+            <img src={product.image} alt={product.name} />
+            <p>{product.long_desc}</p>
             {/* Render the rest of the product details here */}
           </Col>
         </Row>
