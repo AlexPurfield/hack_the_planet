@@ -1,3 +1,10 @@
+// const Stripe = require('stripe');
+require('dotenv').config();
+const stripe = Stripe('sk_test_51O84RdCtpfsF2ochuYUQVSK7rXUKROnSNJGmRG1U2j573D6i0CTtr2HtHKvaxwkTsWvKNy7pDBYW5L5n7u6NE4Ni003bjF8b37');
+const Stripe = Stripe(process.env.STRIPE_SECRET_KEY);
+
+
+
 const express = require("express");
 // Import the ApolloServer class
 const { ApolloServer } = require("@apollo/server");
