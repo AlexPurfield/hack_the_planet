@@ -22,9 +22,13 @@ const ProductCard = (props) => {
             </Card.Title>
           </Row>
           <Row>
-            <Card.Text className="text-center">
-              {description} <p>{price}</p>
-            </Card.Text>
+          <Card.Text className="text-center">
+            {description}
+          </Card.Text>
+          <Card.Text className="text-center">
+            {price}
+          </Card.Text>
+
           </Row>
           <Row>
             <Col xs lg={8} className="mx-auto">
