@@ -7,18 +7,31 @@ import { Row, Col, Container } from "react-bootstrap";
 const Product = () => {
   const { id } = useParams();
 
-//   const { loading, data } = useQuery(QUERY_SINGLE_PRODUCT);
+  // Fetch data for the specific product using its ID
+  const { loading, data } = useQuery(QUERY_SINGLE_PRODUCT, {
+    variables: { productId: id }
+  });
 
-// if (loading) {
-//     return <div>Loading...</div>;
-//   }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-// const products = data?.product || {};
+  const product = data?.product || {};
 
   return (
     <div>
-      <h1>MyComponent</h1>
-      <p>Path Parameter ID: {id}</p>
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <h1>{product.name}</h1>
+            <p>{product.short_desc}</p>
+            <p>{product.price}</p>
+            <img src={product.image} alt={product.name} />
+            <p>{product.long_desc}</p>
+            {/* Render the rest of the product details here */}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

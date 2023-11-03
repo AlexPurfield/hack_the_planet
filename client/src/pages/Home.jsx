@@ -12,7 +12,7 @@ const products = [
     description: "hacker pick",
     price: 999.99,
     // use img
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 2,
@@ -20,7 +20,7 @@ const products = [
     description: "hacker pick",
     price: 999.99,
     // use img
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 3,
@@ -28,7 +28,7 @@ const products = [
     description: "hacker pick",
     price: 999.99,
     // use img
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 4,
@@ -36,7 +36,7 @@ const products = [
     description: "hacker pick",
     price: 999.99,
     // use img
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
 ];
 
