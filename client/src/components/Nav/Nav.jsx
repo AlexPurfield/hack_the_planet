@@ -33,6 +33,8 @@ function CustomNav() {
             <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
             {/* cart will be its own component */}
             <Nav.Link href="https://buy.stripe.com/test_dR6eYzc6Z9jpfqobII">CHECKOUT</Nav.Link>
+            <Nav.Link href="/Cart">CART</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
