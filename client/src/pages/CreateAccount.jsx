@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { REGISTER_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 function CreateAccount(props) {
   // State for form inputs
@@ -47,42 +48,58 @@ function CreateAccount(props) {
 
   // Form component
   return (
-    <div>
-      <h1>Create Account</h1>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formState.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={formState.password}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Create Account</button>
-      </form>
+    <Container className="mb-5 mt-3">
+      <Row className="text-center">
+        <h1>CREATE ACCOUNT</h1>
+      </Row>
+      <Row>
+        <Col xs={8} className="mx-auto">
+          <Form onSubmit={handleFormSubmit}>
+            <Form.Group className="mb-3" controlId="formGroupEmail">
+              <Form.Label>NAME</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formGroupPassword">
+              <Form.Label>EMAIL</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formGroupPassword">
+              <Form.Label>PASSWORD</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Container className="mx-auto">
+              <Row className="text-center">
+                <Col>
+                  <Button variant="dark" type="submit">
+                    SUBMIT
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
+          </Form>
+        </Col>
+      </Row>
+      <Row className="text-center mt-3">
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
-      <Link to="/login">Already have an account? Log in</Link>
-    </div>
+      <span style={{color:"whitesmoke"}}>Already have an account? <Link to="/login"> Log in</Link></span>
+      </Row>
+    </Container>
   );
 }
 
