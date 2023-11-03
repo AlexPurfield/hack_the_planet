@@ -120,4 +120,7 @@
   .modal-sheet .modal-footer {
     padding-bottom: 2rem;
   }
-  
+  /* Navbar/Cards color */
+  #CustomCardColor {
+    background-color: rgb(18,18,18)!important;
+  }

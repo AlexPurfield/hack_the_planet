@@ -1,4 +1,27 @@
-/* Hack The Planet Logo */
-#BrandCol {
- 
+#custom-nav-brand {
+  justify-content: center;
+}
+
+#custom-nav-container {
+  justify-content: center;
+}
+
+#nav-link-col {
+  width: 97vw;
+}
+
+@media screen and (min-width: 768px) {
+  #nav-link-col {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #custom-nav-dropdown {
+    /* border: 2px solid red; */
+    /* justify-self: left; */
+    text-align: left !important;
+    position: absolute !important;
+    /* top: 0px; */
+    left: 35px;
+  }
 }
