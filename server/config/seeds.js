@@ -68,16 +68,16 @@ db.once("open", async () => {
         "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3497373/3497373_o01_101422/3497373",
 
       short_desc:
-        "Choose this Dell Inspiron 15 3520 laptop to get things done.",
+        "You can stay productive or just surf the Web with help from this Dell all-in-one PC.",
       long_desc:
-        " The 15.6 laptop screen provides FHD resolution and helps prevent glare. The Windows 11 laptop comes with a helpful operating system, offering fun features right away.",
+        "The Dell Inspiron desktop features a massive 1TB hard drive and a generous 256GB solid state drive for simple storage and an Intel Core i5 processor to allow reliable performance. The Windows 11 desktop comes with helpful apps and fun programs right out of the box.",
       category: categories[4]._id,
     },
     {
-      name: "Dell™ Inspiron 15 3520 Laptop",
-      price: 649.99,
+      name: "Dell™ Inspiron 24 5420 All-In-One Desktop PC",
+      price: 749.99,
       image:
-        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3497373/3497373_o01_101422/3497373",
+        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/8855982/8855982_o02/8855982",
 
       short_desc:
         "Choose this Dell Inspiron 15 3520 laptop to get things done.",

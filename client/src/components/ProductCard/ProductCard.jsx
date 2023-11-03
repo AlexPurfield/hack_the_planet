@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
-  const cardStyle = {
-    height: '30rem', // You can adjust the height as needed
-  };
+  
   const { _id, name, description, price, image } = props.product;
   return (
     <Card
@@ -16,7 +14,7 @@ const ProductCard = (props) => {
       id="CustomCardColor"
     
     >
-      <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px', objectFit: 'cover' }}/>
+      <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px', objectFit: 'center' }}/>
       <Card.Body>
         <Container>
           <Row>
