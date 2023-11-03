@@ -9,8 +9,9 @@ import Home from "./pages/Home";
 import SingleProduct from './pages/SingleProduct';
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
-// import CreateAccount from "./pages/CreateAccount";
-import ProductsPage from "./pages/ProductsPage";
+import CreateAccount from "./pages/CreateAccount";
+import AllProducts from "./pages/AllProducts";
+import Product from "./pages/product";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
@@ -34,11 +35,11 @@ const router = createBrowserRouter([
       // },
       {
           path: '/product/:id',
-          element: <SingleProduct />
+          element: <Checkout />
         },
       {
-        path: "/productPage",
-        element: <ProductsPage />,
+        path: "/products",
+        element: <AllProducts />,
       },
       //{
       //     path: '/success',

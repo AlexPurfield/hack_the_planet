@@ -1,7 +1,9 @@
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
+
   const { _id, name, description, price, imgUrl } = props.product;
   return (
     <Card
@@ -27,7 +29,7 @@ const ProductCard = (props) => {
           <Row>
             <Col xs lg={8} className="mx-auto">
               <Button variant="dark" style={{ width: "100%" }}>
-                I'M IN
+                <Link to={`/product/${_id}`}>View Product </Link>
               </Button>
             </Col>
           </Row>
