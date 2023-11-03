@@ -1,15 +1,17 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Nav.css";
 
 function CustomNav() {
   return (
     <Navbar
-      expand="lg"
-      className="bg-body-tertiary justify-content-center"
+      expand="md"
+      className="bg-body-tertiary"
       bg="dark"
       data-bs-theme="dark"
+      id="CustomCardColor"
     >
       <Container>
         <Navbar.Brand className="mx-auto" href="/">
