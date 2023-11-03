@@ -1,55 +1,102 @@
-import React from 'react'; 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import Auth from '../utils/auth';
-// import { ADD_USER } from '../utils/mutations';
-function CreateAccount(props) {
-    const [formState, setFormState] = useState({ email: '', password: '' });
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation, gql } from "@apollo/client";
 
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-//    
-    };
-  
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setFormState({
-        ...formState,
-        [name]: value,
+// GraphQL Mutation
+const REGISTER_USER = gql`
+  mutation registerUser($registerInput: RegisterInput) {
+    registerUser(registerInput: $registerInput) {
+      token
+      user {
+        _id
+        name
+        email
+      }
+    }
+  }
+`;
+
+function CreateAccount(props) {
+  // State for form inputs
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  // Setting up the mutation hook
+  const [registerUser, { loading, error }] = useMutation(REGISTER_USER);
+
+  // Handle form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const { data } = await registerUser({
+        variables: {
+          registerInput: {
+            name: formState.name,
+            email: formState.email,
+            password: formState.password,
+          },
+        },
       });
-    };
-  
-    return (
-      
-      <div className="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabIndex="-1" role="dialog" id="modalSignin">
-        <div className="modal-dialog" role="document">
-          <div className="modal-content rounded-4 shadow">
-            <div className="modal-header p-5 pb-4 border-bottom-0">
-            <Link to="/login">← Go to Login </Link>
-              <h1 className="fw-bold mb-0 fs-2">Sign up for free</h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-  
-            <div className="modal-body p-5 pt-0">
-              <form onSubmit={handleFormSubmit}>
-                <div className="form-floating mb-3">
-                  <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com" name="email" value={formState.email} onChange={handleChange} />
-                  <label htmlFor="floatingInput">Email address</label>
-                </div>
-                <div className="form-floating mb-3">
-                  <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password" name="password" value={formState.password} onChange={handleChange} />
-                  <label htmlFor="floatingPassword">Password</label>
-                </div>
-                <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-                <small className="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
-                <hr className="my-4" />
-              </form>
-            </div>
-          </div>
+
+      // TODO: Handle the response data, e.g., saving the token, redirecting the user
+      console.log(data);
+    } catch (err) {
+      // TODO: Handle registration error
+      console.error("Error during registration:", err);
+    }
+  };
+
+  // Form component
+  return (
+    <div>
+      <h1>Create Account</h1>
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formState.name}
+            onChange={handleChange}
+          />
         </div>
-      </div>
-      
-    );
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formState.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={formState.password}
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
+      <Link to="/login">Already have an account? Log in</Link>
+    </div>
+  );
 }
+
 export default CreateAccount;

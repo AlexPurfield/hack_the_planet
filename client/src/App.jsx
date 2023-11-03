@@ -1,3 +1,8 @@
+import { Auth0Provider } from "@auth0/auth0-react";
+
+// import { Routes, Route } from "react-router-dom";
+// import ProductsPage from './pages/ProductsPage';
+
 import { Outlet } from "react-router-dom";
 import {
   ApolloClient,
@@ -6,7 +11,6 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { Auth0Provider } from "@auth0/auth0-react";
 
 const domain = import.meta.env.VITE_REACT_APP_AUTH0_DOMAIN;
 const clientId = import.meta.env.VITE_REACT_APP_AUTH0_CLIENT_ID;
@@ -44,6 +48,10 @@ function App() {
       <ApolloProvider client={client}>
         {/* <StoreProvider> */}
         <CustomNav />
+        {/* <Routes>
+        {/* <Route path="/products" element={<ProductsPage />} /> */}
+        {/* Add other routes here */}
+        {/* </Routes> */}
         <Outlet />
         <Footer />
         {/* </StoreProvider> */}
@@ -51,5 +59,6 @@ function App() {
     </Auth0Provider>
   );
 }
+
 
 export default App;

@@ -1,7 +1,9 @@
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
+
   const { _id, name, description, price, imgUrl } = props.product;
   return (
     <Card
@@ -20,14 +22,18 @@ const ProductCard = (props) => {
             </Card.Title>
           </Row>
           <Row>
-            <Card.Text className="text-center">
-              {description} <p>{price}</p>
-            </Card.Text>
+          <Card.Text className="text-center">
+            {description}
+          </Card.Text>
+          <Card.Text className="text-center">
+            {price}
+          </Card.Text>
+
           </Row>
           <Row>
             <Col xs lg={8} className="mx-auto">
               <Button variant="dark" style={{ width: "100%" }}>
-                I'M IN
+                <Link to={`/product/${_id}`}>View Product </Link>
               </Button>
             </Col>
           </Row>
