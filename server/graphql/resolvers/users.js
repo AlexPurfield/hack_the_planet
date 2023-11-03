@@ -24,15 +24,6 @@ module.exports = {
         password: encryptedPassword,
       });
 
-      // Create our JWT
-      // const token = jwt.sign(
-      //   { user_id: newUser._id, email },
-      //   process.env.VITE_JWT_TOKEN_KEY,
-      //   {
-      //     expiresIn: "2h",
-      //   }
-      // );
-
       const token = signToken(newUser);
 
       // Save our user in MongoDB
