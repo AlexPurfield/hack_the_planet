@@ -1,11 +1,11 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../utils/queries';
 import { Row, Col, Container } from "react-bootstrap";
 import ProductCard from "../components/ProductCard/ProductCard";
 
 const AllProducts = () => {
+<<<<<<< HEAD
   
 //   const [products, setProducts] = useState([	{
 //     name: "",
@@ -157,19 +157,20 @@ const products = [
     },
 
 ];
+=======
+  const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+>>>>>>> main
 
-// const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-// if (loading) {
-//     return <div>Loading...</div>;
-//   }
-//
+  const products = data?.products || [];
 
-// const products = data?.products || [];
-
-return (
+  return (
     <div>
       <Container>
+<<<<<<< HEAD
         <div>
           <h1 >Laptops</h1>
       <Row>
@@ -220,10 +221,18 @@ return (
         ))}
       </Row>
       </div>
+=======
+        <Row>
+          {products.map((product) => (
+            <Col xs={12} md={3} key={product._id}>
+              <ProductCard product={product} />
+            </Col>
+          ))}
+        </Row>
+>>>>>>> main
       </Container>
     </div>
   );
- };
-
+};
 
 export default AllProducts;
