@@ -10,7 +10,8 @@ import Checkout from './pages/checkout';
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
-import ProductsPage from "./pages/ProductsPage";
+import AllProducts from "./pages/AllProducts";
+import Product from "./pages/product";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
@@ -33,12 +34,16 @@ const router = createBrowserRouter([
         element: <CreateAccount />,
       },
       {
-          path: '/product/:id',
-          element: <Checkout />
-        },
+        path: '/product/:id',
+        element: <Product />,
+      },
+      // {
+      //     path: '/product/:id',
+      //     element: <Checkout />
+      //   },
       {
-        path: "/productPage",
-        element: <ProductsPage />,
+        path: "/products",
+        element: <AllProducts />,
       },
       //{
       //     path: '/success',
