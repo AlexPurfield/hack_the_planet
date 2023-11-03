@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../utils/queries';
 import { Row, Col, Container } from "react-bootstrap";
@@ -19,7 +20,10 @@ const AllProducts = () => {
         <Row>
           {products.map((product) => (
             <Col xs={12} md={3} key={product._id}>
-              <ProductCard product={product} />
+              {/* Use Link to navigate to the Product component with the product's ID as a parameter */}
+              <Link to={`/product/${product._id}`}>
+                <ProductCard product={product} />
+              </Link>
             </Col>
           ))}
         </Row>
@@ -29,3 +33,4 @@ const AllProducts = () => {
 };
 
 export default AllProducts;
+
