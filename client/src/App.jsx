@@ -1,3 +1,6 @@
+import { Routes, Route } from "react-router-dom";
+import ProductsPage from './pages/ProductsPage';
+
 import { Outlet } from "react-router-dom";
 import {
   ApolloClient,
@@ -44,6 +47,10 @@ function App() {
       <ApolloProvider client={client}>
         {/* <StoreProvider> */}
         <CustomNav />
+        <Routes>
+        <Route path="/products" element={<ProductsPage />} />
+        {/* Add other routes here */}
+        </Routes>
         <Outlet />
         <Footer />
         {/* </StoreProvider> */}
@@ -51,5 +58,6 @@ function App() {
     </Auth0Provider>
   );
 }
+
 
 export default App;
