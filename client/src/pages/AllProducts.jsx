@@ -5,8 +5,10 @@ import { Row, Col, Container } from "react-bootstrap";
 import ProductCard from "../components/ProductCard/ProductCard";
 
 const AllProducts = () => {
-  const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
-
+  const { loading, data, error } = useQuery(QUERY_ALL_PRODUCTS);
+if (error) {
+  console.log(JSON.stringify(error));
+}
   if (loading) {
     return <div>Loading...</div>;
   }
