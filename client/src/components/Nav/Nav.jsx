@@ -27,8 +27,7 @@ function CustomNav() {
               <NavDropdown.Item href="#action/3.3">DESKS</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">CHAIRS</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                ALL HARDWARE
+              <NavDropdown.Item href="/products">All Hardware
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link>LOGIN</Nav.Link>
