@@ -6,10 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import Home from "./pages/Home";
-import Checkout from './pages/checkout';
+import SingleProduct from './pages/SingleProduct';
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
-import CreateAccount from "./pages/CreateAccount";
+// import CreateAccount from "./pages/CreateAccount";
 import ProductsPage from "./pages/ProductsPage";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
@@ -28,13 +28,13 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      {
-        path: "/createaccount",
-        element: <CreateAccount />,
-      },
+      // {
+      //   path: "/createaccount",
+      //   element: <CreateAccount />,
+      // },
       {
           path: '/product/:id',
-          element: <Checkout />
+          element: <SingleProduct />
         },
       {
         path: "/productPage",
