@@ -11,28 +11,28 @@ const products = [
     name: "LAPTOP",
     description: "hacker pick",
     price: 999.99,
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 2,
     name: "KEYBOARD",
     description: "hacker pick",
     price: 999.99,
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 3,
     name: "MOUSE",
     description: "hacker pick",
     price: 999.99,
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
   {
     _id: 4,
     name: "DESK",
     description: "hacker pick",
     price: 999.99,
-    imgUrl: "/assets/images/Laptop.jpg",
+    image: "/assets/images/Laptop.jpg",
   },
 ];
 
