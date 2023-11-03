@@ -6,6 +6,7 @@ type Query {
   order(_id: ID!): Order
   user(id: ID!): User
   me: User
+  checkout(products: [ID]!): CheckoutSession
 }
 
 type Mutation {
@@ -56,7 +57,7 @@ type Order {
   products: [Product]
 }
 
-type Checkout {
+type CheckoutSession {
   session: ID
 }
 
