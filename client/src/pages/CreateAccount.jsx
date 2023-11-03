@@ -1,20 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMutation, gql } from "@apollo/client";
-
-// GraphQL Mutation
-const REGISTER_USER = gql`
-  mutation registerUser($registerInput: RegisterInput) {
-    registerUser(registerInput: $registerInput) {
-      token
-      user {
-        _id
-        name
-        email
-      }
-    }
-  }
-`;
+import { REGISTER_USER } from "../utils/mutations";
 
 function CreateAccount(props) {
   // State for form inputs
