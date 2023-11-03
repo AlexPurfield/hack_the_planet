@@ -62,22 +62,22 @@ db.once("open", async () => {
       category: categories[3]._id,
     },
     {
-      name: "Dell™ Inspiron 15 3520 Laptop",
-      price: 649.99,
+      name: "Lenovo® IdeaPad Flex 5i 2-in-1 Touch Laptop",
+      price: 629.99,
       image:
-        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3497373/3497373_o01_101422/3497373",
+        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/7317994/7317994_o01_090323/7317994",
 
       short_desc:
-        "Choose this Dell Inspiron 15 3520 laptop to get things done.",
+        "Make the most of your time with this Lenovo IdeadPad laptop. The Windows 11 laptop offers plenty of helpful features, including a built-in webcam and built-in WiFi 6. The Lenovo convertible laptop easily rotates to become a tablet, adding versatility to its arsenal.",
       long_desc:
-        " The 15.6 laptop screen provides FHD resolution and helps prevent glare. The Windows 11 laptop comes with a helpful operating system, offering fun features right away.",
+        "Lenovo® IdeaPad features a massive 1TB hard drive and a generous 256GB solid state drive for simple storage and an Intel Core i5 processor to allow reliable performance. The Windows 11 desktop comes with helpful apps and fun programs right out of the box.",
       category: categories[4]._id,
     },
     {
-      name: "Dell™ Inspiron 15 3520 Laptop",
-      price: 649.99,
+      name: "Dell™ Inspiron 24 5420 All-In-One Desktop PC",
+      price: 749.99,
       image:
-        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/3497373/3497373_o01_101422/3497373",
+        "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/8855982/8855982_o02/8855982",
 
       short_desc:
         "Choose this Dell Inspiron 15 3520 laptop to get things done.",
