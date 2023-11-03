@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import AllProducts from "./pages/AllProducts";
 import Product from "./pages/product";
+// import Product from "./pages/product";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       // },
       {
           path: '/product/:id',
-          element: <Checkout />
+          element: <Product />
         },
       {
         path: "/products",
