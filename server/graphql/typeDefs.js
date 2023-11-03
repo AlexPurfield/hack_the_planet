@@ -1,4 +1,32 @@
 const typeDefs = `
+type Query {
+  categories: [Category]
+  products(category: ID, name: String): [Product]
+  product(_id: ID!): Product
+  order(_id: ID!): Order
+  user(id: ID!): User
+  me: User
+}
+
+type Mutation {
+  registerUser(registerInput: RegisterInput): Auth
+  loginUser(loginInput: LoginInput): Auth
+  addOrder(products: [ID]!): Order
+  updateUser(firstName: String, lastName: String, email: String, password: String): User
+  updateProduct(_id: ID!, quantity: Int!): Product
+}
+
+input RegisterInput {
+  name: String!
+  email: String!
+  password: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
 type Product {
   _id: ID
   name: String
@@ -35,37 +63,6 @@ type Checkout {
 type Auth {
   token: ID!
   user: User
-}
-
-input RegisterInput {
-  name: String!
-  email: String!
-  password: String!
-}
-
-input LoginInput {
-  email: String!
-  password: String!
-}
-
-type Query {
-  categories: [Category]
-  products(category: ID, name: String,) : [Product]
-  product(_id: ID!): Product
-  order(_id: ID!): Order
-  checkout(products: [ID]!): Checkout
-  user(id: ID!): User
-  me: User
-}
-
-type Mutation {
-  registerUser(registerInput: RegisterInput): Auth
-  loginUser(loginInput: LoginInput): Auth
-  addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-  addOrder(products: [ID]!): Order
-  updateUser(firstName: String, lastName: String, email: String, password: String): User
-  updateProduct(_id: ID!, quantity: Int!): Product
-  login(email: String!, password: String!): Auth
 }
 `;
 
