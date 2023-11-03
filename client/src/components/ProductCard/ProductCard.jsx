@@ -16,7 +16,7 @@ const ProductCard = (props) => {
       id="CustomCardColor"
     
     >
-      <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px', objectFit: 'cover' }}/>
+      <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px', objectFit: 'center' }}/>
       <Card.Body>
         <Container>
           <Row>
