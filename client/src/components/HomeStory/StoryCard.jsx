@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 function StoryCard() {
   return (
     <Card className="mt-3" bg="dark" data-bs-theme="dark" id = "CustomCardColor">
-      <Card.Title className="mx-auto bg-dark mt-2" id = "CustomCardColor">HACK THE PLANET</Card.Title>
+      {/* <Card.Title className="mx-auto bg-dark mt-2" id = "CustomCardColor">HACK THE PLANET</Card.Title> */}
       <Card.Body>
         <p style={{ textAlign: "center" }}>
           Welcome to Hack The Planet, where innovation and creativity intersect
