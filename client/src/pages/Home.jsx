@@ -9,28 +9,28 @@ const products = [
   {
     _id: 1,
     name: "LAPTOP",
-    description: "top seller",
+    description: "hacker pick",
     price: 999.99,
     imgUrl: "/assets/images/Laptop.jpg",
   },
   {
     _id: 2,
     name: "KEYBOARD",
-    description: "top seller",
+    description: "hacker pick",
     price: 999.99,
     imgUrl: "/assets/images/Laptop.jpg",
   },
   {
     _id: 3,
     name: "MOUSE",
-    description: "top seller",
+    description: "hacker pick",
     price: 999.99,
     imgUrl: "/assets/images/Laptop.jpg",
   },
   {
     _id: 4,
     name: "DESK",
-    description: "top seller",
+    description: "hacker pick",
     price: 999.99,
     imgUrl: "/assets/images/Laptop.jpg",
   },
@@ -46,11 +46,10 @@ const Home = () => {
         <StoryCard />
       </Row>
       <Row>
-        {products.map((product, i)=>(
-        <Col xs={3} key={i}>
-          <ProductCard product={product} />
-        </Col>
-
+        {products.map((product, i) => (
+          <Col xs={12} md={3} key={i}>
+            <ProductCard product={product} />
+          </Col>
         ))}
       </Row>
       {/* <CreateAccount /> */}
