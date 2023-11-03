@@ -1,6 +1,6 @@
-const db = require("./connection");
+const db = require("../config/connection");
 const { User, Product, Category } = require("../models");
-const cleanDB = require("./cleanDB");
+const cleanDB = require("../config/cleanDB");
 
 db.once("open", async () => {
   await cleanDB("category_id", "categories");
