@@ -27,11 +27,9 @@ function CustomNav() {
               <NavDropdown.Item href="#action/3.3">DESKS</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">CHAIRS</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/products">
-                ALL HARDWARE
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/products">ALL HARDWARE</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link>LOGIN</Nav.Link>
+            <Nav.Link href="/login">LOGIN</Nav.Link>
             <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
             {/* cart will be its own component */}
             <Nav.Link href="/client/src/pages/Checkout.jsx">CHECKOUT</Nav.Link>

@@ -12,9 +12,6 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-const domain = import.meta.env.VITE_REACT_APP_AUTH0_DOMAIN;
-const clientId = import.meta.env.VITE_REACT_APP_AUTH0_CLIENT_ID;
-
 import CustomNav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 // import { StoreProvider } from './utils/GlobalState';
@@ -40,25 +37,18 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      redirectUri={window.location.origin}
-    >
-      <ApolloProvider client={client}>
-        {/* <StoreProvider> */}
-        <CustomNav />
-        {/* <Routes>
+    <ApolloProvider client={client}>
+      {/* <StoreProvider> */}
+      <CustomNav />
+      {/* <Routes>
         {/* <Route path="/products" element={<ProductsPage />} /> */}
-        {/* Add other routes here */}
-        {/* </Routes> */}
-        <Outlet />
-        <Footer />
-        {/* </StoreProvider> */}
-      </ApolloProvider>
-    </Auth0Provider>
+      {/* Add other routes here */}
+      {/* </Routes> */}
+      <Outlet />
+      <Footer />
+      {/* </StoreProvider> */}
+    </ApolloProvider>
   );
 }
-
 
 export default App;
