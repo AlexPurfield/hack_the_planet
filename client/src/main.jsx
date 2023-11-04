@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import AllProducts from "./pages/AllProducts";
 import Product from "./pages/product";
-import Cart from "./components/Cart/Cart";
+import Cart from "./pages/cart";
 // import Product from "./pages/product";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <AllProducts />,
       },
       {
-        path: "/Cart",
+        path: "/cart",
         element: <Cart />,
       },
       //{
