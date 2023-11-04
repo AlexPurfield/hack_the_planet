@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge, ListGroup } from "react-bootstrap";
-import { getCart, removeFromCart } from "../utils/CartUtils";
+import { getCart, removeFromCart } from "../utils/cartUtils";
 import swal from "sweetalert2"; // SweetAlert2 library
 
 const CartPage = () => {
@@ -8,7 +8,6 @@ const CartPage = () => {
 
 // Handler to remove item from cart
   const handleRemoveFromCart = (itemId) => {
-    removeFromCart(itemId);
     swal
       .fire({
         icon: "warning",
