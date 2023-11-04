@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Table, Button } from "react-bootstrap";
 import { getCart, removeFromCart } from "../utils/cartUtils"; // Assumed utility functions
+import swal from "sweetalert2"; // SweetAlert2 library
 
 const CartPage = () => {
   // Assuming getCart is a function to get cart items from localStorage or context
@@ -8,8 +9,23 @@ const CartPage = () => {
 
   // Handler to remove item from cart
   const handleRemoveFromCart = (itemId) => {
-    removeFromCart(itemId); // A function to remove the item from the cart
-    // Update state or re-fetch cart items to reflect changes
+    swal
+      .fire({
+        icon: "warning",
+        title: "Are you sure?",
+        text: "Do you want to remove this item from your cart?",
+        showCancelButton: true, // Show cancel button
+        confirmButtonText: "Yes, remove it!", // Text for confirm button
+        cancelButtonText: "No, keep it", // Text for cancel button
+        reverseButtons: true, // Reverse the order of confirm and cancel buttons
+      })
+      .then((result) => {
+        // If confirmed, result.value will be true; otherwise, false or undefined if Swal is dismissed by other means
+        if (result.value) {
+          removeFromCart(itemId); // Remove the item from the cart only if confirmed
+          // Update state or re-fetch cart items to reflect changes
+        }
+      });
   };
 
   // Calculate total price

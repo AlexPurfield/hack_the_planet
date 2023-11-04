@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
+import Swal from "sweetalert2";
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -11,15 +12,21 @@ function Login(props) {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      // The mutationResponse will now reflect the structure we expect from the backend
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
-      // Assuming the server returns the token under loginUser, adjust accordingly
       const token = mutationResponse.data.loginUser.token;
       Auth.login(token);
     } catch (e) {
       console.error("Error during login", e);
+      // You can also use SweetAlert to show errors
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong with the login!",
+        showConfirmButton: true,
+      });
     }
   };
 
