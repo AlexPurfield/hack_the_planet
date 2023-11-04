@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Table, Button } from "react-bootstrap";
+import { Badge, ListGroup } from "react-bootstrap";
 import { getCart, removeFromCart } from "../utils/cartUtils"; // Assumed utility functions
 import swal from "sweetalert2"; // SweetAlert2 library
 
-const CartPage = () => {
-  // Assuming getCart is a function to get cart items from localStorage or context
-  const cartItems = getCart();
 
-  // Handler to remove item from cart
+const CartPage = () => {
+  const cartItems = getCart(); // Assuming this is a function to get cart items
+
   const handleRemoveFromCart = (itemId) => {
+
     swal
       .fire({
         icon: "warning",
@@ -28,54 +28,49 @@ const CartPage = () => {
       });
   };
 
-  // Calculate total price
-  const totalPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
-    <Container>
-      <h1>Shopping Cart</h1>
-      {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
-      ) : (
-        <>
-          <Table striped bordered hover variant="dark" responsive>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cartItems.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>${item.price.toFixed(2)}</td>
-                  <td>{item.quantity}</td>
-                  <td>${(item.price * item.quantity).toFixed(2)}</td>
-                  <td>
-                    <Button
-                      variant="danger"
-                      onClick={() => handleRemoveFromCart(item.id)}
-                    >
-                      Remove
-                    </Button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-          <div className="text-right">
-            <h4>Total Price: ${totalPrice.toFixed(2)}</h4>
-          </div>
-        </>
-      )}
-    </Container>
+    <div className="container h-100">
+      <div className="row h-100 justify-content-center align-items-center">
+        <div className="col-md-5 col-lg-4">
+          <h4 className="d-flex justify-content-between align-items-center mb-3">
+            <span className="text-white">Your cart</span>
+            <Badge bg="primary" pill>
+              {cartItems.length}
+            </Badge>
+          </h4>
+          <ListGroup className="mb-3">
+            {cartItems.map((item) => (
+              <ListGroup.Item
+                key={item.id}
+                className="d-flex justify-content-between lh-sm bg-secondary text-white"
+              >
+                <div>
+                  <h6 className="my-0">{item.name}</h6>
+                  <small className="text-muted">{item.description}</small>
+                </div>
+                <div className="d-flex flex-column align-items-end">
+                  <span className="text-white mb-2">${item.price}</span>
+                  <button
+                    type="button"
+                    className="btn btn-danger btn-sm"
+                    onClick={() => handleRemoveFromCart(item.id)}
+                    style={{ height: '38px', width: '75px' }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </ListGroup.Item>
+            ))}
+            <ListGroup.Item className="d-flex justify-content-between bg-secondary text-white">
+              <span>Total (USD)</span>
+              <strong>${totalPrice.toFixed(2)}</strong>
+            </ListGroup.Item>
+          </ListGroup>
+        </div>
+      </div>
+    </div>
   );
 };
 

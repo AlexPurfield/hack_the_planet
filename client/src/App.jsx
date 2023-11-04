@@ -1,5 +1,10 @@
+
+// import { Auth0Provider } from "@auth0/auth0-react";
+// import { Routes, Route } from "react-router-dom";
+// import ProductsPage from './pages/ProductsPage';
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { Outlet } from "react-router-dom";
 import {
   ApolloClient,
@@ -12,7 +17,9 @@ import Swal from "sweetalert2";
 
 import CustomNav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+
 import AuthService from "./utils/auth"; // Ensure this is implemented
+
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -34,6 +41,10 @@ const client = new ApolloClient({
 });
 
 const CHECK_INTERVAL = 5 * 60 * 1000; // 5 minutes
+
+
+
+
 
 function App() {
   const navigate = useNavigate();
