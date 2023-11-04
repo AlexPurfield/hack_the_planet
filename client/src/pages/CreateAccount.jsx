@@ -47,41 +47,78 @@ function CreateAccount(props) {
 
   // Form component
   return (
-    <div>
-      <h1>Create Account</h1>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label>Name:</label>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "10px", // padding at the top
+        width: "100%", // ensure div takes full width
+      }}
+    >
+      <h1 style={{ color: "white", textAlign: "center" }}>Create Account</h1>
+      <form
+        onSubmit={handleFormSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          width: "100%", // full width of the container
+          maxWidth: "320px", // max width of the form
+          padding: "1rem",
+          boxSizing: "border-box",
+          backgroundColor: "#f2f3f4",
+        }}
+      >
+        <div style={{ width: "100%", marginBottom: "1rem" }}>
+          <label style={{ marginBottom: "0.5rem", color: "black" }}>
+            Name:
+          </label>
           <input
             type="text"
             name="name"
             value={formState.name}
             onChange={handleChange}
+            style={{ width: "100%", padding: "0.5rem" }}
           />
         </div>
-        <div>
-          <label>Email:</label>
+        <div style={{ width: "100%", marginBottom: "1rem" }}>
+          <label style={{ marginBottom: "0.5rem", color: "black" }}>
+            Email:
+          </label>
           <input
             type="email"
             name="email"
             value={formState.email}
             onChange={handleChange}
+            style={{ width: "100%", padding: "0.5rem" }}
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div style={{ width: "100%", marginBottom: "1rem" }}>
+          <label style={{ marginBottom: "0.5rem", color: "black" }}>
+            Password:
+          </label>
           <input
             type="password"
             name="password"
             value={formState.password}
             onChange={handleChange}
+            style={{ width: "100%", padding: "0.5rem" }}
           />
         </div>
-        <button type="submit">Create Account</button>
+        <button
+          type="submit"
+          style={{ padding: "0.5rem 1rem", cursor: "pointer", color: "white" }}
+        >
+          Create Account
+        </button>
       </form>
       {loading && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
-      <Link to="/login">Already have an account? Log in</Link>
+      {error && <p style={{ color: "red" }}>Error: {error.message}</p>}
+      <Link to="/login" style={{ color: "white", padding: "0.5rem 1rem" }}>
+        Already have an account? Click here
+      </Link>
     </div>
   );
 }
