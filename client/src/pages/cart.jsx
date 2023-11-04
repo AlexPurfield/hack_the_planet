@@ -1,12 +1,14 @@
 import React from "react";
-import { Container, Table, Button } from "react-bootstrap";
-import { getCart, removeFromCart } from "../utils/cartUtils"; // Assumed utility functions
+import { Badge, ListGroup } from "react-bootstrap";
+import { getCart, removeFromCart } from "../utils/CartUtils"; // Assumed utility functions
 import swal from "sweetalert2"; // SweetAlert2 library
 
 const CartPage = () => {
   const cartItems = getCart(); // Assuming this is a function to get cart items
 
   const handleRemoveFromCart = (itemId) => {
+    removeFromCart(itemId);
+    // ...additional logic to update component state and re-render may be required
     swal
       .fire({
         icon: "warning",
