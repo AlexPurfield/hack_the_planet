@@ -2,6 +2,7 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 import { addToCart } from "../../utils/CartUtils";
+// import { addToCart } from "../../utils/cartUtils";
 
 const ProductCard = (props) => {
   const cardStyle = {
@@ -28,13 +29,12 @@ const ProductCard = (props) => {
       border="dark"
       className="mt-3"
       id="CustomCardColor"
-    
     >
       <Card.Img
-       variant="top" 
-       src={image} 
-       style={{ width: '300px', height: '300px', objectFit: 'center' }}
-       />
+        variant="top"
+        src={image}
+        style={{ width: "300px", height: "300px", objectFit: "center" }}
+      />
       <Card.Body>
         <Container>
           <Row>
@@ -43,12 +43,11 @@ const ProductCard = (props) => {
             </Card.Title>
           </Row>
           <Row>
-          <Card.Text className="text-center">${price}</Card.Text>
+            <Card.Text className="text-center">${price}</Card.Text>
           </Row>
           <Row>
             <Col xs lg={8} className="mx-auto">
               <Button variant="dark bottom" style={{ width: "100%" }}>
-                {/* <Link to={`/product/${_id}`}>View Product</Link> */}
                 <Link to={`/product/${_id}`} className="link-light">
                   View Product
                 </Link>

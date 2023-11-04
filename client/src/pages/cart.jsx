@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Table, Button } from "react-bootstrap";
-import { getCart, removeFromCart } from "../utils/CartUtils"; // Assumed utility functions
+import { getCart, removeFromCart } from "../utils/cartUtils"; // Assumed utility functions
 
 const CartPage = () => {
   // Assuming getCart is a function to get cart items from localStorage or context

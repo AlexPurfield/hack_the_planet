@@ -32,46 +32,39 @@ function Login(props) {
   };
 
   return (
-    // <div className="container my-1 bg-white">
-    //   <Link to="/signup">← Go to Signup</Link>
-
-    //   <h2>Login</h2>
-    //   <form onSubmit={handleFormSubmit}>
-    //     <div className="flex-row space-between my-2">
-    //       <label className="text-color-white" htmlFor="email">
     <div
-    className="container my-1"
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: "10px", // padding at the top
-      width: "100%", // ensure div takes full width
-    }}
-  >
-    <h2 style={{ color: "white", textAlign: "center" }}>Login</h2>
-    <form
-      onSubmit={handleFormSubmit}
+      className="container my-1"
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "flex-start",
-        width: "100%", // full width of the container
-        maxWidth: "320px", // max width of the form
-        padding: "1rem",
-        boxSizing: "border-box",
-        backgroundColor: "#f2f3f4",
+        padding: "10px", // padding at the top
+        width: "100%", // ensure div takes full width
       }}
     >
-      <div
-        className="flex-row space-between my-2"
-        style={{ marginBottom: "1rem", width: "100%" }}
+      <h2 style={{ color: "white", textAlign: "center" }}>Login</h2>
+      <form
+        onSubmit={handleFormSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          width: "100%", // full width of the container
+          maxWidth: "320px", // max width of the form
+          padding: "1rem",
+          boxSizing: "border-box",
+          backgroundColor: "#f2f3f4",
+        }}
       >
-        <label
-          htmlFor="email"
-          style={{ marginBottom: "0.5rem", color: "black" }}
+        <div
+          className="flex-row space-between my-2"
+          style={{ marginBottom: "1rem", width: "100%" }}
         >
+          <label
+            htmlFor="email"
+            style={{ marginBottom: "0.5rem", color: "black" }}
+          >
             Email address:
           </label>
           <input
@@ -84,9 +77,7 @@ function Login(props) {
             style={{ width: "100%", padding: "0.5rem" }}
           />
         </div>
-        {/* <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label> */}
-          <div
+        <div
           className="flex-row space-between my-2"
           style={{ marginBottom: "1rem", width: "100%" }}
         >
@@ -111,9 +102,7 @@ function Login(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         )}
-        {/* <div className="flex-row flex-end">
-          <button type="submit">Submit</button> */}
-          <div
+        <div
           className="flex-row flex-end"
           style={{
             width: "100%",

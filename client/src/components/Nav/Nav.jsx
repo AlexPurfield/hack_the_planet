@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-// import { Container, Row, Col } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import AuthService from "../../utils/auth"; // Make sure to implement this if it doesn't exist
 import "./Nav.css";
