@@ -103,7 +103,7 @@ function Login(props) {
             onChange={handleChange}
             style={{ width: "100%", padding: "0.5rem" }}
           />
-        </div>
+        </div >
         {error && (
           <div style={{ color: "red", marginBottom: "1rem" }}>
             <p className="error-text">The provided credentials are incorrect</p>
