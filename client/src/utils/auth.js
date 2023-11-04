@@ -1,4 +1,5 @@
 import decode from "jwt-decode";
+import Swal from "sweetalert2";
 
 class AuthService {
   getProfile() {
@@ -31,7 +32,8 @@ class AuthService {
     // Saves user token to localStorage
     localStorage.setItem("id_token", idToken);
 
-    window.location.assign("/");
+    // Redirect with a query parameter indicating a successful login
+    window.location.assign("/?login=success");
   }
 
   logout() {
