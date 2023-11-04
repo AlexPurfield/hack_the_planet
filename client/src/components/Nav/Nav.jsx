@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Container } from "react-bootstrap";
 import AuthService from "../../utils/auth"; // Make sure to implement this if it doesn't exist
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 function CustomNav() {
@@ -50,13 +51,25 @@ function CustomNav() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavDropdown title="HARDWARE" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">LAPTOPS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">KEYBOARDS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">MICE</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">DESKS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5">CHAIRS</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products?section=laptops">
+                LAPTOPS
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products?section=keyboards">
+                KEYBOARDS
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products?section=mice">
+                MICE
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products?section=desks">
+                DESKS
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products?section=chairs">
+                CHAIRS
+              </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/products">ALL HARDWARE</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products">
+                ALL HARDWARE
+              </NavDropdown.Item>
             </NavDropdown>
             {/* <Nav.Link href="/login">LOGIN</Nav.Link>
             <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
