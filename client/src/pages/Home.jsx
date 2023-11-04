@@ -24,7 +24,7 @@ const products = [
     _id: "65468f3fe096c127beebe408",
     name: "MOUSE",
     description: "hacker pick",
-    price: 999.99,
+    price: 19.99,
     image: "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/604723/604723_o02_021323/604723",
   },
   {
