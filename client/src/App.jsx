@@ -17,7 +17,9 @@ import Swal from "sweetalert2";
 
 import CustomNav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+
 import AuthService from "./utils/auth"; // Ensure this is implemented
+
 
 const httpLink = createHttpLink({
   uri: "/graphql",
