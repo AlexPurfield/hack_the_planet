@@ -70,8 +70,7 @@ function CustomNav() {
                 <Nav.Link href="/createaccount">Create Account</Nav.Link>
               </>
             )}
-
-            {/* cart will be its own component */}
+            <Nav.Link href="/cart">CART</Nav.Link>
             <Nav.Link href="https://buy.stripe.com/test_dR6eYzc6Z9jpfqobII">
               CHECKOUT
             </Nav.Link>
