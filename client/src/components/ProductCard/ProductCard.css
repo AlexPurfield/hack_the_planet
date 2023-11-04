@@ -1,3 +1,8 @@
-#CustomCardColor {
+.card-footer {
   background-color: rgb(18, 18, 18) !important;
+  border-top: 0;
+}
+
+.card-body {
+  border-bottom: 0;
 }

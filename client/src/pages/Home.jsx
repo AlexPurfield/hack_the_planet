@@ -16,7 +16,7 @@ const products = [
   },
   {
     _id: 2,
-    name: "KEYBOARD",
+    name: "KEYBOARD are the new wave of the future of technologoy",
     description: "hacker pick",
     price: 999.99,
     // use img
@@ -33,7 +33,8 @@ const products = [
   {
     _id: 4,
     name: "DESK",
-    description: "hacker pick",
+    description:
+      "hacker pick of the week dljkjfkldjfdkjfkdjfdkljfdlkjfkdljfkldjfkdfjdkjfdklfjkdjfkldjfkldj",
     price: 999.99,
     // use img
     image: "/assets/images/Laptop.jpg",

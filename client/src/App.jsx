@@ -14,6 +14,7 @@ import { setContext } from "@apollo/client/link/context";
 
 import CustomNav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+import BackgroundWrapper from "./components/BackgroundWrapper/BackgroundWrapper";
 // import { StoreProvider } from './utils/GlobalState';
 
 const httpLink = createHttpLink({
@@ -40,11 +41,9 @@ function App() {
     <ApolloProvider client={client}>
       {/* <StoreProvider> */}
       <CustomNav />
-      {/* <Routes>
-        {/* <Route path="/products" element={<ProductsPage />} /> */}
-      {/* Add other routes here */}
-      {/* </Routes> */}
+      {/* <BackgroundWrapper> */}
       <Outlet />
+      {/* </BackgroundWrapper> */}
       <Footer />
       {/* </StoreProvider> */}
     </ApolloProvider>

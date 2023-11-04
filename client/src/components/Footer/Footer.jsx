@@ -2,7 +2,7 @@ import { Row, Container, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Container className=" d-flex justify-content-center mt-3">
+    <Container className=" d-flex justify-content-center">
       <Row>
         <Col>
           <p>© 2023, Hack The Planet</p>
