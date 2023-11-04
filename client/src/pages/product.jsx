@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PRODUCT } from '../utils/queries';
 import { Row, Col, Container } from "react-bootstrap";
+import ProductCard from "../components/ProductCard/ProductCard";
 
 const Product = () => {
   const { id } = useParams();
@@ -19,16 +20,14 @@ const Product = () => {
   const product = data?.product || {};
 
   return (
-    <div>
+    <div id="backgroundImageAllProduct">
       <Container>
         <Row>
           <Col xs={12}>
-            <h1>{product.name}</h1>
-            <p>{product.short_desc}</p>
-            <p>{product.price}</p>
-            <img src={product.image} alt={product.name} />
-            <p>{product.long_desc}</p>
-            {/* Render the rest of the product details here */}
+            <h1 className="display-4 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.name}</h1>
+            <ProductCard product={product} />
+            <p className="display-6 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.short_desc}</p>
+            <p className="display-6 font-weight-bold text-white bg-opaque"id='custom-bg-secondary'>{product.long_desc}</p>
           </Col>
         </Row>
       </Container>

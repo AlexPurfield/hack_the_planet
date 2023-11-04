@@ -6,7 +6,7 @@ const ProductCard = (props) => {
   const cardStyle = {
     height: "30rem", // You can adjust the height as needed
   };
-  const { _id, name, description, price, image } = props.product;
+  const { _id, name, price, image } = props.product;
   return (
     <Card
       bg="dark"
