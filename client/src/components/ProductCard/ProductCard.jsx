@@ -1,8 +1,7 @@
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
-import { addToCart } from "../../utils/CartUtils";
-// import { addToCart } from "../../utils/cartUtils";
+import { addToCart } from "../../utils/cartUtils";
 
 const ProductCard = (props) => {
   const cardStyle = {
