@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { REGISTER_USER } from "../utils/mutations";
+import { REGISTER_USER, LOGIN } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import Swal from "sweetalert2";
+import Auth from "../utils/auth";
 
 function CreateAccount(props) {
   // State for form inputs
@@ -13,6 +16,7 @@ function CreateAccount(props) {
 
   // Setting up the mutation hook
   const [registerUser, { loading, error }] = useMutation(REGISTER_USER);
+  const [login, { err }] = useMutation(LOGIN);
 
   // Handle form input changes
   const handleChange = (event) => {
@@ -36,90 +40,83 @@ function CreateAccount(props) {
           },
         },
       });
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.loginUser.token;
+      Auth.login(token);
 
-      // TODO: Handle the response data, e.g., saving the token, redirecting the user
+      //Handle the response data, e.g., saving the token, redirecting the user
       console.log(data);
     } catch (err) {
-      // TODO: Handle registration error
+      // Handle registration error
       console.error("Error during registration:", err);
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong with the account creation!",
+        showConfirmButton: true,
+      });
     }
   };
 
   // Form component
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "10px", // padding at the top
-        width: "100%", // ensure div takes full width
-      }}
-    >
-      <h1 style={{ color: "white", textAlign: "center" }}>Create Account</h1>
-      <form
-        onSubmit={handleFormSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          width: "100%", // full width of the container
-          maxWidth: "320px", // max width of the form
-          padding: "1rem",
-          boxSizing: "border-box",
-          backgroundColor: "#f2f3f4",
-        }}
-      >
-        <div style={{ width: "100%", marginBottom: "1rem" }}>
-          <label style={{ marginBottom: "0.5rem", color: "black" }}>
-            Name:
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "0.5rem" }}
-          />
-        </div>
-        <div style={{ width: "100%", marginBottom: "1rem" }}>
-          <label style={{ marginBottom: "0.5rem", color: "black" }}>
-            Email:
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formState.email}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "0.5rem" }}
-          />
-        </div>
-        <div style={{ width: "100%", marginBottom: "1rem" }}>
-          <label style={{ marginBottom: "0.5rem", color: "black" }}>
-            Password:
-          </label>
-          <input
-            type="password"
-            name="password"
-            value={formState.password}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "0.5rem" }}
-          />
-        </div>
-        <button
-          type="submit"
-          style={{ padding: "0.5rem 1rem", cursor: "pointer", color: "white" }}
-        >
-          Create Account
-        </button>
-      </form>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>Error: {error.message}</p>}
-      <Link to="/login" style={{ color: "white", padding: "0.5rem 1rem" }}>
-        Already have an account? Click here
-      </Link>
-    </div>
+    <Container className="mb-5 mt-3">
+      <Row className="text-center">
+        <h1>CREATE ACCOUNT</h1>
+      </Row>
+      <Row>
+        <Col xs={8} className="mx-auto">
+          <Form onSubmit={handleFormSubmit}>
+            <Form.Group className="mb-3" controlId="formGroupEmail">
+              <Form.Label>NAME</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formGroupPassword">
+              <Form.Label>EMAIL</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formGroupPassword">
+              <Form.Label>PASSWORD</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Container className="mx-auto">
+              <Row className="text-center">
+                <Col>
+                  <Button variant="dark" type="submit">
+                    SUBMIT
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
+          </Form>
+        </Col>
+      </Row>
+      <Row className="text-center mt-3">
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error.message}</p>}
+        <span style={{ color: "whitesmoke" }}>
+          Already have an account? <Link to="/login"> Log in</Link>
+        </span>
+      </Row>
+    </Container>
   );
 }
 

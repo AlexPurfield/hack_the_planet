@@ -5,8 +5,9 @@ import swal from "sweetalert2"; // SweetAlert2 library
 
 
 const CartPage = () => {
-  const cartItems = getCart(); // Assuming this is a function to get cart items
+  const cartItems = getCart(); 
 
+// Handler to remove item from cart
   const handleRemoveFromCart = (itemId) => {
 
     swal
@@ -27,7 +28,7 @@ const CartPage = () => {
         }
       });
   };
-
+// Calculate total price
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
