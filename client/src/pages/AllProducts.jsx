@@ -31,8 +31,8 @@ const AllProducts = () => {
       <Container>
         {/* Chairs Section */}
         <div id="chairs" className="product-section">
-          <h1 className="display-2 font-weight-bold text-decoration-underline text-white bg-opaque">
-            Chairs
+          <h1 className="display-2 font-weight-bold text-white bg-opaque">
+            CHAIRS
           </h1>
           <Row>
             {products.slice(0, 4).map((product, i) => (
@@ -45,8 +45,8 @@ const AllProducts = () => {
 
         {/* Laptops Section */}
         <div id="laptops" className="product-section">
-          <h1 className="display-2 font-weight-bold text-decoration-underline text-white bg-opaque">
-            Laptops
+          <h1 className="display-2 font-weight-bold  text-white bg-opaque">
+            LAPTOPS
           </h1>
           <Row>
             {products.slice(4, 8).map((product, i) => (
@@ -59,8 +59,8 @@ const AllProducts = () => {
 
         {/* Keyboards Section */}
         <div id="keyboards" className="product-section">
-          <h1 className="display-2 font-weight-bold text-decoration-underline text-white bg-opaque">
-            Keyboards
+          <h1 className="display-2 font-weight-bold text-white bg-opaque">
+            KEYBOARDS
           </h1>
           <Row>
             {products.slice(8, 12).map((product, i) => (
@@ -73,8 +73,8 @@ const AllProducts = () => {
 
         {/* Mice Section */}
         <div id="mice" className="product-section">
-          <h1 className="display-2 font-weight-bold text-decoration-underline text-white bg-opaque">
-            Mice
+          <h1 className="display-2 font-weight-bold  text-white bg-opaque">
+            MICE
           </h1>
           <Row>
             {products.slice(12, 16).map((product, i) => (
@@ -87,8 +87,8 @@ const AllProducts = () => {
 
         {/* Desks Section */}
         <div id="desks" className="product-section">
-          <h1 className="display-2 font-weight-bold text-decoration-underline text-white bg-opaque">
-            Desks
+          <h1 className="display-2 font-weight-bold  text-white bg-opaque">
+            DESKS
           </h1>
           <Row>
             {products.slice(16, 20).map((product, i) => (
