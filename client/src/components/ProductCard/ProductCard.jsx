@@ -33,10 +33,7 @@ const ProductCard = (props) => {
       <Card.Img
         variant="top"
         src={image}
-        style={{ width: "300px", height: "300px", 
-        objectFit: "center" }}
-        // style={{  maxWidth: '100%', height: 'auto', width: '100%', objectFit: 'contain' }}
-
+        style={{ axWidth: '100%', height: 'auto', width: '100%', objectFit: 'contain' }}
       />
       <Card.Body>
         <Container>
