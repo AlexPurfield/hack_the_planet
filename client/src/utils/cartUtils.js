@@ -1,16 +1,13 @@
 // cartUtils.js
-
 // Utility function to get the current cart from local storage
 export function getCart() {
   const cart = localStorage.getItem("cart");
   return cart ? JSON.parse(cart) : [];
 }
-
 // Utility function to save the cart to local storage
 function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
-
 // Function to add an item to the cart
 export function addToCart(item) {
   const cart = getCart();
@@ -24,7 +21,6 @@ export function addToCart(item) {
   }
   saveCart(cart); // Save the updated cart to local storage
 }
-
 // Function to remove an item from the cart
 export function removeFromCart(itemId) {
   let cart = getCart();
@@ -32,7 +28,6 @@ export function removeFromCart(itemId) {
   saveCart(cart);
   window.location.reload();
 }
-
 // Function to clear the cart
 export function clearCart() {
   localStorage.removeItem("cart");

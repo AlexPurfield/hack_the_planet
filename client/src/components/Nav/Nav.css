@@ -1,6 +1,9 @@
 #custom-nav-brand {
   justify-content: center;
 }
+#custom-brand-col {
+  z-index: 5;
+}
 
 #custom-nav-container {
   justify-content: center;
@@ -8,6 +11,7 @@
 
 #nav-link-col {
   width: 97vw;
+  z-index: 3;
 }
 
 @media screen and (min-width: 768px) {
