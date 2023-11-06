@@ -46,10 +46,10 @@ function CreateAccount(props) {
       const token = mutationResponse.data.loginUser.token;
       Auth.login(token);
 
-      // TODO: Handle the response data, e.g., saving the token, redirecting the user
+      //Handle the response data, e.g., saving the token, redirecting the user
       console.log(data);
     } catch (err) {
-      // TODO: Handle registration error
+      // Handle registration error
       console.error("Error during registration:", err);
       Swal.fire({
         position: "center",

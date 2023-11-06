@@ -18,7 +18,7 @@ module.exports = {
       return await Product.findById(_id).populate("category");
     },
   },
-  // If you have any mutations related to products, they would go here
+  // any mutations related to products, they would go here
   Mutation: {
     // Example: addProduct, updateProduct, deleteProduct, etc.
   },
