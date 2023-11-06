@@ -49,7 +49,7 @@ function Login(props) {
         width: "100%", // ensure div takes full width
       }}
     >
-      <h2 style={{ color: "white", textAlign: "center" }}>Login</h2>
+      <h2 style={{ color: "white", textAlign: "center" }}>LOGIN</h2>
       <form
         onSubmit={handleFormSubmit}
         style={{

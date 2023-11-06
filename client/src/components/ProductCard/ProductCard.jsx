@@ -33,7 +33,7 @@ const ProductCard = (props) => {
       <Card.Img
         variant="top"
         src={image}
-        style={{ width: "300px", height: "300px", objectFit: "center" }}
+        style={{ width: "300px", height: "300px", objectFit: "cover" }}
       />
       <Card.Body>
         <Container>
@@ -53,7 +53,7 @@ const ProductCard = (props) => {
                 </Link>
               </Button>
               <Button
-                variant="primary"
+                variant="secondary"
                 onClick={handleAddToCart}
                 style={{ width: "100%", marginTop: "0.5rem" }}
               >
