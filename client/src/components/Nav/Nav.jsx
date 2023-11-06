@@ -88,7 +88,7 @@ function CustomNav() {
               </>
             )}
             <Nav.Link href="/cart">CART</Nav.Link>
-            <Nav.Link href="https://buy.stripe.com/test_dR6eYzc6Z9jpfqobII">
+            <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">
               CHECKOUT
             </Nav.Link>
 
