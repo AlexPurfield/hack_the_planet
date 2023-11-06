@@ -6,14 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import Home from "./pages/Home";
-// import SingleProduct from "./pages/SingleProduct";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import AllProducts from "./pages/AllProducts";
 import Product from "./pages/product";
 import Cart from "./pages/cart";
-// import Product from "./pages/product";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
