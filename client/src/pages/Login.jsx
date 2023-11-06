@@ -39,7 +39,7 @@ function Login(props) {
   };
 
   return (
-    <div
+    <div 
       className="container my-1"
       style={{
         display: "flex",
@@ -47,6 +47,7 @@ function Login(props) {
         alignItems: "center",
         padding: "10px", // padding at the top
         width: "100%", // ensure div takes full width
+        
       }}
     >
       <h2 style={{ color: "white", textAlign: "center" }}>LOGIN</h2>
@@ -61,7 +62,7 @@ function Login(props) {
           maxWidth: "320px", // max width of the form
           padding: "1rem",
           boxSizing: "border-box",
-          backgroundColor: "#f2f3f4",
+          backgroundColor: "black",
         }}
       >
         <div

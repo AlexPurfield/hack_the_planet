@@ -45,7 +45,7 @@ function CustomNav() {
     >
       <Container id="custom-nav-container">
         <Row>
-          <Col xs className="text-center">
+          <Col xs className="text-center" id="custom-brand-col">
             <Navbar.Brand id="custom-nav-brand" href="/">
               HACK THE PLANET
             </Navbar.Brand>
