@@ -83,11 +83,7 @@ function CustomNav() {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </div>
-                {/* <Nav.Link href="/login">LOGIN</Nav.Link>
-            <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
-            cart will be its own component
-          <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">CHECKOUT</Nav.Link> */}
-
+            
                 {/* Conditional rendering based on login status */}
                 {loggedIn ? (
                   <Nav.Link as="button" onClick={handleLogout}>
@@ -100,7 +96,7 @@ function CustomNav() {
                   </>
                 )}
                 <Nav.Link href="/cart">CART</Nav.Link>
-                <Nav.Link href="https://buy.stripe.com/test_dR6eYzc6Z9jpfqobII">
+                <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">
                   CHECKOUT
                 </Nav.Link>
               </Nav>
