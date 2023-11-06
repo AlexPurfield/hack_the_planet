@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 // cartUtils.js
 
 // Utility function to get the current cart from local storage
@@ -23,13 +22,7 @@ export function addToCart(item) {
     item.quantity = 1; // If not, set quantity to 1
     cart.push(item); // And add the new item to the cart
   }
-  saveCart(cart);
-  // Save the updated cart to local storage
-  Swal.fire({
-    icon: "success",
-    title: "",
-    text: "Successfully added to cart!",
-  });
+  saveCart(cart); // Save the updated cart to local storage
 }
 
 // Function to remove an item from the cart
