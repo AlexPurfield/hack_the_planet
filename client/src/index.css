@@ -105,6 +105,12 @@
     outline: none;
     border-radius: 3px;
     transition: box-shadow 0.2s;
+    color: whitesmoke !important;
+    background-color: rgb(18, 18, 18) !important;
+  }
+
+  input::placeholder {
+    color: grey !important;
   }
   
   input:focus {
@@ -112,6 +118,14 @@
     box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
   }
 
+  .display-4{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+  }
+  
+  .form-label {
+    color: whitesmoke;
+  }
 
   .modal-sheet .modal-dialog {
     width: 380px;

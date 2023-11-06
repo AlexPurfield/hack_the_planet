@@ -1,3 +1,36 @@
-#CustomCardColor {
+.card-footer {
   background-color: rgb(18, 18, 18) !important;
+  border-top: 0;
+}
+.card{
+  height:100%;
+}
+.card-body {
+  border-bottom: 0;
+  height:100%;
+}
+
+.Card-Image {
+  width: 100% !important;
+  height: 300px !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.Card-Body {
+  height: 150px !important;
+}
+
+.Card-Title {
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  padding: 5px;
+}
+
+.Card-Title h3 {
+  font-size: 23px !important;
+  text-overflow: ellipsis;
+  margin: 0px;
 }

@@ -32,7 +32,10 @@ const ProductCard = (props) => {
       <Card.Img
         variant="top"
         src={image}
-        style={{ width: "300px", height: "300px", objectFit: "center" }}
+        style={{ width: "300px", height: "300px", 
+        objectFit: "center" }}
+        // style={{  maxWidth: '100%', height: 'auto', width: '100%', objectFit: 'contain' }}
+
       />
       <Card.Body>
         <Container>
@@ -44,24 +47,26 @@ const ProductCard = (props) => {
           <Row>
             <Card.Text className="text-center">${price}</Card.Text>
           </Row>
-          <Row>
-            <Col xs lg={8} className="mx-auto">
-              <Button variant="dark bottom" style={{ width: "100%" }}>
-                <Link to={`/product/${_id}`} className="link-light">
-                  View Product
-                </Link>
-              </Button>
-              <Button
-                variant="primary"
-                onClick={handleAddToCart}
-                style={{ width: "100%", marginTop: "0.5rem" }}
-              >
-                Add to Cart
-              </Button>
-            </Col>
-          </Row>
         </Container>
       </Card.Body>
+      <Card.Footer>
+        <Row>
+          <Col xs lg={8} className="mx-auto">
+            <Button variant="dark bottom" style={{ width: "100%" }}>
+              <Link to={`/product/${_id}`} className="link-light">
+                View Product
+              </Link>
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={handleAddToCart}
+              style={{ width: "100%", marginTop: "0.5rem" }}
+            >
+              Add to Cart
+            </Button>
+          </Col>
+        </Row>
+      </Card.Footer>
     </Card>
   );
 };

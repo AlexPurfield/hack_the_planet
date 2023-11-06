@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import AuthService from "../../utils/auth"; // Make sure to implement this if it doesn't exist
 import { Link } from "react-router-dom";
 import "./Nav.css";
@@ -38,57 +38,75 @@ function CustomNav() {
   return (
     <Navbar
       expand="md"
-      className="bg-body-tertiary"
+      // className="bg-body-tertiary"
       bg="dark"
       data-bs-theme="dark"
       id="CustomCardColor"
     >
-      <Container>
-        <Navbar.Brand className="mx-auto" href="/">
-          HACK THE PLANET
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <NavDropdown title="HARDWARE" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/products?section=laptops">
-                LAPTOPS
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products?section=keyboards">
-                KEYBOARDS
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products?section=mice">
-                MICE
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products?section=desks">
-                DESKS
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products?section=chairs">
-                CHAIRS
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/products">
-                ALL HARDWARE
-              </NavDropdown.Item>
-            </NavDropdown>
-             {/* Conditional rendering based on login status */}
-             {loggedIn ? (
-              <Nav.Link as="button" onClick={handleLogout}>
-                Logout
-              </Nav.Link> // Changed to a button for the onClick event
-            ) : (
-              <>
-                <Nav.Link href="/login">Login</Nav.Link>
-                <Nav.Link href="/createaccount">Create Account</Nav.Link>
-              </>
-            )}
-            <Nav.Link href="/cart">CART</Nav.Link>
-            <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">
-              CHECKOUT
-            </Nav.Link>
+      <Container id="custom-nav-container">
+        <Row>
+          <Col xs className="text-center" id="custom-brand-col">
+            <Navbar.Brand id="custom-nav-brand" href="/">
+              HACK THE PLANET
+            </Navbar.Brand>
+          </Col>
+          <Col xs id="nav-link-col" className="text-end">
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              id="custom-nav-hamburger"
+            />
+            <Navbar.Collapse id="basic-navbar-nav" className="ms-auto">
+              <Nav className="ms-auto">
+                <div id="custom-nav-dropdown">
+                  <NavDropdown title="HARDWARE" id="basic-nav-dropdown">
+                    <NavDropdown.Item as={Link} to="/products?section=laptops">
+                      LAPTOPS
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      as={Link}
+                      to="/products?section=keyboards"
+                    >
+                      KEYBOARDS
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/products?section=mice">
+                      MICE
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/products?section=desks">
+                      DESKS
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/products?section=chairs">
+                      CHAIRS
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item as={Link} to="/products">
+                      ALL HARDWARE
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </div>
+                {/* <Nav.Link href="/login">LOGIN</Nav.Link>
+            <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
+            cart will be its own component
+          <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">CHECKOUT</Nav.Link> */}
 
-          </Nav>
-        </Navbar.Collapse>
+                {/* Conditional rendering based on login status */}
+                {loggedIn ? (
+                  <Nav.Link as="button" onClick={handleLogout}>
+                    Logout
+                  </Nav.Link> // Changed to a button for the onClick event
+                ) : (
+                  <>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/createaccount">Create Account</Nav.Link>
+                  </>
+                )}
+                <Nav.Link href="/cart">CART</Nav.Link>
+                <Nav.Link href="https://buy.stripe.com/test_dR6eYzc6Z9jpfqobII">
+                  CHECKOUT
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Col>
+        </Row>
       </Container>
     </Navbar>
   );
