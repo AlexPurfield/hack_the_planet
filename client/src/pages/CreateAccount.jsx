@@ -112,8 +112,12 @@ function CreateAccount(props) {
       <Row className="text-center mt-3">
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
-        <span style={{ color: "whitesmoke" }}>
-          Already have an account? <Link to="/login"> Log in</Link>
+        <span style={{ color: "grey" }}>
+          Already have an account?{" "}
+          <Link to="/Login" style={{ color: "whitesmoke" }}>
+            {" "}
+            Log in
+          </Link>
         </span>
       </Row>
     </Container>

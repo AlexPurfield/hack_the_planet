@@ -36,13 +36,7 @@ function CustomNav() {
   }, []);
 
   return (
-    <Navbar
-      expand="md"
-      // className="bg-body-tertiary"
-      bg="dark"
-      data-bs-theme="dark"
-      id="CustomCardColor"
-    >
+    <Navbar expand="md" bg="dark" data-bs-theme="dark" id="CustomCardColor">
       <Container id="custom-nav-container">
         <Row>
           <Col xs className="text-center" id="custom-brand-col">
@@ -59,22 +53,22 @@ function CustomNav() {
               <Nav className="ms-auto">
                 <div id="custom-nav-dropdown">
                   <NavDropdown title="HARDWARE" id="basic-nav-dropdown">
-                    <NavDropdown.Item as={Link} to="/products?section=laptops">
+                    <NavDropdown.Item as={Link} to="/laptops">
                       LAPTOPS
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/products?section=keyboards"
-                    >
+                    <NavDropdown.Item as={Link} to="/keyboards">
                       KEYBOARDS
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=mice">
+                    <NavDropdown.Item as={Link} to="/mice">
+                      {" "}
                       MICE
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=desks">
+                    <NavDropdown.Item as={Link} to="/desks">
+                      {" "}
                       DESKS
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=chairs">
+                    <NavDropdown.Item as={Link} to="/chairs">
+                      {" "}
                       CHAIRS
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -83,7 +77,6 @@ function CustomNav() {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </div>
-            
                 {/* Conditional rendering based on login status */}
                 {loggedIn ? (
                   <Nav.Link as="button" onClick={handleLogout}>
@@ -91,8 +84,8 @@ function CustomNav() {
                   </Nav.Link> // Changed to a button for the onClick event
                 ) : (
                   <>
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/createaccount">Create Account</Nav.Link>
+                    <Nav.Link href="/login">LOGIN</Nav.Link>
+                    <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
                   </>
                 )}
                 <Nav.Link href="/cart">CART</Nav.Link>

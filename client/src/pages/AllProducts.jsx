@@ -31,7 +31,7 @@ const AllProducts = () => {
       <Container>
         {/* Chairs Section */}
         <div id="chairs" className="product-section">
-          <h1 className="display-4 font-weight-bold text-white bg-opaque">
+          <h1 className="display-4 font-weight-bold text-white bg-opaque pt-3">
             CHAIRS
           </h1>
           <Row className="pb-5">

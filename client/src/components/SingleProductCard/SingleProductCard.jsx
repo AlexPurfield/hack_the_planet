@@ -8,14 +8,14 @@ import {
   Image,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./ProductCard.css";
+import "./SingleProductCard.css";
 import { addToCart } from "../../utils/cartUtils";
 
 const ProductCard = (props) => {
   const cardStyle = {
     height: "30rem", // You can adjust the height as needed
   };
-  const { _id, name, price, image } = props.product;
+  const { _id, name, price, image, short_desc, } = props.product;
 
   const handleAddToCart = () => {
     // Create a product object with the necessary properties
@@ -34,7 +34,7 @@ const ProductCard = (props) => {
       bg="dark"
       data-bs-theme="dark"
       border="dark"
-      className="mt-3 custom-product-card"
+      className="mt-3"
       id="CustomCardColor"
     >
       <Ratio className="custom-ratio" aspectRatio="1x1">
@@ -44,7 +44,7 @@ const ProductCard = (props) => {
         <Container>
           <Row>
             <Card.Title className="text-center">
-              <h3>{name}</h3>
+              <h3>{short_desc}</h3>
             </Card.Title>
           </Row>
           <Row>
@@ -55,11 +55,6 @@ const ProductCard = (props) => {
       <Card.Footer>
         <Row>
           <Col xs lg={8} className="mx-auto">
-            <Button variant="dark bottom" style={{ width: "100%" }}>
-              <Link to={`/product/${_id}`} className="link-light">
-                View Product
-              </Link>
-            </Button>
             <Button
               variant="secondary"
               onClick={handleAddToCart}
