@@ -36,13 +36,7 @@ function CustomNav() {
   }, []);
 
   return (
-    <Navbar
-      expand="md"
-      // className="bg-body-tertiary"
-      bg="dark"
-      data-bs-theme="dark"
-      id="CustomCardColor"
-    >
+    <Navbar expand="md" bg="dark" data-bs-theme="dark" id="CustomCardColor">
       <Container id="custom-nav-container">
         <Row>
           <Col xs className="text-center" id="custom-brand-col">
@@ -90,8 +84,8 @@ function CustomNav() {
                   </Nav.Link> // Changed to a button for the onClick event
                 ) : (
                   <>
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/createaccount">Create Account</Nav.Link>
+                    <Nav.Link href="/login">LOGIN</Nav.Link>
+                    <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
                   </>
                 )}
                 <Nav.Link href="/cart">CART</Nav.Link>

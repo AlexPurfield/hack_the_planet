@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import { useState, useEffect } from "react";
 
 const Mice = () => {
-  //change
   const [categoryId, setCategoryId] = useState("");
   const [products, setProducts] = useState([]);
 
@@ -19,7 +18,7 @@ const Mice = () => {
     if (!catLoading) {
       setCategoryId(
         catData?.categories.find((e) => {
-          return e.name === "Mouses"; // change  // from apollo
+          return e.name === "Mouses";
         })._id
       );
       setProducts(data?.products || []);
@@ -32,9 +31,8 @@ const Mice = () => {
         {/* Mice Section */}
         <div id="mice" className="product-section">
           {" "}
-          //change id
           <h1 className="display-4 font-weight-bold text-white bg-opaque pt-3">
-            MICE //change title
+            MICE
           </h1>
           <Row className="pb-5">
             {products.slice(0, 4).map((product, i) => (
@@ -49,4 +47,4 @@ const Mice = () => {
   );
 };
 
-export default Mice; //change
+export default Mice;

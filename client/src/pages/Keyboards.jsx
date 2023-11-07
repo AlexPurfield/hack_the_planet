@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import { useState, useEffect } from "react";
 
 const Keyboards = () => {
-  //change
   const [categoryId, setCategoryId] = useState("");
   const [products, setProducts] = useState([]);
 
@@ -19,7 +18,7 @@ const Keyboards = () => {
     if (!catLoading) {
       setCategoryId(
         catData?.categories.find((e) => {
-          return e.name === "Keyboards"; // change  // from apollo
+          return e.name === "Keyboards";
         })._id
       );
       setProducts(data?.products || []);
@@ -32,9 +31,8 @@ const Keyboards = () => {
         {/* Keyboards Section */}
         <div id="keyboards" className="product-section">
           {" "}
-          //change id
           <h1 className="display-4 font-weight-bold text-white bg-opaque pt-3">
-            KEYBOARDS //change title
+            KEYBOARDS
           </h1>
           <Row className="pb-5">
             {products.slice(0, 4).map((product, i) => (
@@ -49,4 +47,4 @@ const Keyboards = () => {
   );
 };
 
-export default Keyboards; //change
+export default Keyboards;

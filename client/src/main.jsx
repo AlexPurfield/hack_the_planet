@@ -17,8 +17,6 @@ import Laptops from "./pages/Laptops.jsx";
 import Mice from "./pages/Mice.jsx";
 import Desks from "./pages/Desks.jsx";
 import Keyboards from "./pages/Keyboards.jsx";
-// import Success from './pages/Success';
-// import OrderHistory from './pages/OrderHistory';
 
 const router = createBrowserRouter([
   {
@@ -70,7 +68,6 @@ const router = createBrowserRouter([
         path: "/keyboards",
         element: <Keyboards />,
       },
-      // add routes
     ],
   },
 ]);

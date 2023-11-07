@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import { useState, useEffect } from "react";
 
 const Chairs = () => {
-  //change
   const [categoryId, setCategoryId] = useState("");
   const [products, setProducts] = useState([]);
 
@@ -19,7 +18,7 @@ const Chairs = () => {
     if (!catLoading) {
       setCategoryId(
         catData?.categories.find((e) => {
-          return e.name === "Chairs"; // change  // from apollo
+          return e.name === "Chairs";
         })._id
       );
       setProducts(data?.products || []);
@@ -32,9 +31,8 @@ const Chairs = () => {
         {/* Chairs Section */}
         <div id="chairs" className="product-section">
           {" "}
-          //change id
           <h1 className="display-4 font-weight-bold text-white bg-opaque pt-3">
-            CHAIRS //change title
+            CHAIRS
           </h1>
           <Row className="pb-5">
             {products.slice(0, 4).map((product, i) => (
@@ -49,4 +47,4 @@ const Chairs = () => {
   );
 };
 
-export default Chairs; //change
+export default Chairs;
