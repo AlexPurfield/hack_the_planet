@@ -1,3 +1,4 @@
+const path = require("path")
 // const Stripe = require('stripe');
 require("dotenv").config();
 // const stripe = Stripe('sk_test_51O84RdCtpfsF2ochuYUQVSK7rXUKROnSNJGmRG1U2j573D6i0CTtr2HtHKvaxwkTsWvKNy7pDBYW5L5n7u6NE4Ni003bjF8b37');
@@ -35,6 +36,14 @@ const startApolloServer = async () => {
       context: authMiddleware,
     })
   );
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    });
+  }
 
   db.once("open", () => {
     app.listen(PORT, () => {
