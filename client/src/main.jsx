@@ -12,6 +12,11 @@ import CreateAccount from "./pages/CreateAccount";
 import AllProducts from "./pages/AllProducts";
 import Product from "./pages/product";
 import Cart from "./pages/cart";
+import Chairs from "./pages/Chairs.jsx";
+import Laptops from "./pages/Laptops.jsx";
+import Mice from "./pages/Mice.jsx";
+import Desks from "./pages/Desks.jsx";
+import Keyboards from "./pages/Keyboards.jsx";
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
@@ -45,13 +50,27 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
-      //{
-      //     path: '/success',
-      //     element: <Success />
-      //   }, {
-      //     path: '/orderHistory',
-      //     element: <OrderHistory />
-      //   },
+      {
+        path: "/chairs",
+        element: <Chairs />,
+      },
+      {
+        path: "/laptops",
+        element: <Laptops />,
+      },
+      {
+        path: "/mice",
+        element: <Mice />,
+      },
+      {
+        path: "/desks",
+        element: <Desks />,
+      },
+      {
+        path: "/keyboards",
+        element: <Keyboards />,
+      },
+      // add routes
     ],
   },
 ]);

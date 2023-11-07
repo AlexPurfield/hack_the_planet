@@ -85,8 +85,12 @@ function Login(props) {
             </Container>
           </Form>
           <Row className="text-center mt-3">
-            <span style={{ color: "whitesmoke" }}>
-              Don't have an account? <Link to="/login"> Sign up here!</Link>
+            <span style={{ color: "grey" }}>
+              Don't have an account?{" "}
+              <Link to="/CreateAccount" style={{ color: "whitesmoke" }}>
+                {" "}
+                Sign up here!
+              </Link>
             </span>
           </Row>
         </Col>

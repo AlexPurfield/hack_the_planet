@@ -59,22 +59,22 @@ function CustomNav() {
               <Nav className="ms-auto">
                 <div id="custom-nav-dropdown">
                   <NavDropdown title="HARDWARE" id="basic-nav-dropdown">
-                    <NavDropdown.Item as={Link} to="/products?section=laptops">
+                    <NavDropdown.Item as={Link} to="/laptops">
                       LAPTOPS
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/products?section=keyboards"
-                    >
+                    <NavDropdown.Item as={Link} to="/keyboards">
                       KEYBOARDS
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=mice">
+                    <NavDropdown.Item as={Link} to="/mice">
+                      {" "}
                       MICE
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=desks">
+                    <NavDropdown.Item as={Link} to="/desks">
+                      {" "}
                       DESKS
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/products?section=chairs">
+                    <NavDropdown.Item as={Link} to="/chairs">
+                      {" "}
                       CHAIRS
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -83,11 +83,6 @@ function CustomNav() {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </div>
-                {/* <Nav.Link href="/login">LOGIN</Nav.Link>
-            <Nav.Link href="/createaccount">CREATE ACCOUNT</Nav.Link>
-            cart will be its own component
-          <Nav.Link href="https://buy.stripe.com/test_3cs8Abdb33Z50vubIJ">CHECKOUT</Nav.Link> */}
-
                 {/* Conditional rendering based on login status */}
                 {loggedIn ? (
                   <Nav.Link as="button" onClick={handleLogout}>
